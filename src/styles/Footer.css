@@ -1,0 +1,141 @@
+/* components/Footer.css */
+.footer {
+  background-color: var(--dark-brown);
+  color: var(--sand-beige);
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.footer-about h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--copper-rose);
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  color: var(--sand-beige);
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-social a {
+  color: var(--sand-beige);
+  transition: color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--copper-rose);
+}
+
+.footer-social svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer-section h4 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.footer-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-list li {
+  display: flex;
+  align-items: flex-start;
+  color: var(--sand-beige);
+}
+
+.footer-icon {
+  margin-right: 0.75rem;
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--sand-beige);
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold-ochre);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--copper-rose);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.footer-bottom p {
+  color: var(--sand-beige);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom p {
+    margin-bottom: 0;
+  }
+}
+
+.footer-legal {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-legal a {
+  color: var(--sand-beige);
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--copper-rose);
+}

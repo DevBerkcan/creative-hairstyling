@@ -1,0 +1,175 @@
+/* components/Services.css */
+.services {
+  padding: 8rem 0;
+  background-color: var(--white);
+}
+
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--dark-brown);
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.services-subtitle {
+  color: var(--dark-brown);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-content {
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.service-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--copper-rose);
+}
+
+.service-description {
+  color: var(--dark-brown);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+  opacity: 0.8;
+  flex-grow: 1;
+}
+
+.service-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.service-price {
+  color: var(--copper-rose);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.service-line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-left: 1.5rem;
+}
+
+.services-booking {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.booking-button {
+  display: inline-block;
+  background-color: var(--gold-ochre);
+  color: var(--dark-brown);
+  padding: 1rem 2.5rem;
+  border-radius: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+.booking-button:hover {
+  background-color: var(--copper-rose);
+  color: var(--white);
+}
+
+.booking-button::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--copper-rose);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.booking-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 5rem 0;
+  }
+  
+  .service-content {
+    padding: 2rem;
+  }
+}

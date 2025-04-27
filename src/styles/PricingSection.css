@@ -1,0 +1,157 @@
+/* components/PricingSection.css */
+.pricing-section {
+  padding: 8rem 0;
+  background-color: var(--sand-beige);
+}
+
+.pricing-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.pricing-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--dark-brown);
+  font-family: var(--font-heading);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.pricing-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background-color: var(--copper-rose);
+}
+
+.pricing-subtitle {
+  color: var(--dark-brown);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.pricing-card.highlight {
+  border: 1px solid var(--gold-ochre);
+  box-shadow: 0 5px 15px rgba(210, 180, 140, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-card-header h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card-header span {
+  font-size: 0.9rem;
+  color: var(--copper-rose);
+  letter-spacing: 0.5px;
+}
+
+.pricing-items {
+  padding: 1.5rem;
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-item span:first-child {
+  color: var(--dark-brown);
+  flex: 1;
+  padding-right: 1rem;
+}
+
+.pricing-value {
+  color: var(--copper-rose);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pricing-tier {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+
+.pricing-tier span {
+  color: var(--copper-rose);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.pricing-disclaimer {
+  margin-top: 4rem;
+  font-size: 0.85rem;
+  color: var(--dark-brown);
+  text-align: center;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .pricing-section {
+    padding: 5rem 0;
+  }
+  
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pricing-card-header {
+    padding: 1.25rem;
+  }
+  
+  .pricing-items {
+    padding: 1.25rem;
+  }
+}

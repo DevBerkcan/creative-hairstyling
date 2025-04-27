@@ -1,0 +1,151 @@
+/* components/BookingBanner.css */
+.booking-banner {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(to right, var(--dark-brown), var(--deep-green));
+  color: var(--white);
+  overflow: hidden;
+}
+
+.booking-banner-text h2 {
+  font-family: var(--font-heading);
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .booking-banner-text h2 {
+    font-size: 1.875rem;
+  }
+}
+
+.booking-banner-text p {
+  color: var(--sand-beige);
+  margin-bottom: 1.5rem;
+}
+
+.booking-feature-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: rgba(217, 207, 199, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.booking-feature-icon svg {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.booking-button {
+  background-color: var(--gold-ochre);
+  color: var(--dark-brown);
+  border-radius: 4px;
+}
+
+.booking-button:hover {
+  background-color: var(--copper-rose);
+  color: var(--white);
+}
+
+.booking-banner-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.booking-banner-circle-1 {
+  position: absolute;
+  top: 5rem;
+  left: -5rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.booking-banner-circle-2 {
+  position: absolute;
+  bottom: 2.5rem;
+  right: -2.5rem;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.booking-banner-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.booking-banner-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .booking-banner-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.booking-banner-text {
+  text-align: center;
+  max-width: 42rem;
+}
+
+@media (min-width: 1024px) {
+  .booking-banner-text {
+    text-align: left;
+  }
+}
+
+.booking-features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .booking-features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.booking-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .booking-feature {
+    align-items: flex-start;
+  }
+}
+
+.booking-feature span {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.booking-button-container {
+  flex-shrink: 0;
+}
