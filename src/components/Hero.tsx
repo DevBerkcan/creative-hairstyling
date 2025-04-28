@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "../styles/Hero.css";
 import backgroundImage1 from "../assets/frisur.jpg";
 import backgroundImage2 from "../assets/gettyimages-450245049_sf.webp";
+import { FaPhone, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -32,9 +33,17 @@ export const Hero = () => {
       title: "New York's Since 2004",
       description: "Tradition meets modern hairstyling. Unser erfahrenes Team steht Ihnen mit jahrelanger Expertise zur Verfügung.",
       buttonText: "Über uns",
-      background: backgroundImage1 // You can add a third image
+      background: backgroundImage1
     }
   ];
+
+  // Auto slide change every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [slides.length]);
 
   const nextSlide = () => {
     setActiveSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -56,6 +65,19 @@ export const Hero = () => {
 
   return (
     <section id="home" className="hero" ref={ref}>
+      {/* Top left icons */}
+      <div className="hero-top-icons">
+        <a href="tel:+123456789" className="hero-icon-link">
+          <FaPhone className="hero-icon" />
+        </a>
+        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+          <FaMapMarkerAlt className="hero-icon" />
+        </a>
+        <a href="https://booking-provider.com/haarstudio-schoenheit" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+          <FaCalendarAlt className="hero-icon" />
+        </a>
+      </div>
+
       {/* Full-screen background images */}
       {slides.map((slide, index) => (
         <motion.div 
@@ -139,8 +161,8 @@ export const Hero = () => {
         </div>
       </div>
 
-        {/* Vertical navigation menu - connected to sections */}
-        <nav className="hero-vertical-nav">
+      {/* Vertical navigation menu - connected to sections */}
+      <nav className="hero-vertical-nav">
         <ul>
           <li onClick={() => scrollToSection('home')}>HOME</li>
           <li onClick={() => scrollToSection('services')}>SERVICES</li>

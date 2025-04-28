@@ -8,6 +8,39 @@
   overflow: hidden;
 }
 
+/* Top left icons */
+.hero-top-icons {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  z-index: 20;
+  display: flex;
+  gap: 20px;
+}
+
+.hero-icon-link {
+  color: var(--dark-brown);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(244, 240, 234, 0.7);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero-icon-link:hover {
+  background-color: var(--gold-ochre);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.hero-icon {
+  font-size: 1.1rem;
+}
+
 /* Full-screen background images */
 .hero-background-image {
   position: absolute;
