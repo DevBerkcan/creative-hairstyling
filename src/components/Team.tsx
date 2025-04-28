@@ -1,73 +1,59 @@
-// components/Team.tsx
 import { motion } from 'framer-motion';
 import '../styles/Team.css';
 
-const teamMembers = [
-  {
-    name: "Anna Müller",
-    role: "Hairstylist & Inhaberin",
-    bio: "Mit über 15 Jahren Erfahrung in der Branche spezialisiert auf Farbtechniken und moderne Schnitte.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Lisa Schmidt",
-    role: "Hairstylistin",
-    bio: "Expertin für natürliche Looks und pflegende Behandlungen mit einem Auge für Details.",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-  },
-  {
-    name: "Markus Weber",
-    role: "Barbier",
-    bio: "Spezialist für klassische Herrenschnitte und Rasur mit traditionellen Techniken.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
-  },
-];
-
 export const Team = () => {
   return (
-    <section id="team" className="team">
-      <div className="team-container">
+    <section id="uber-uns" className="uber-uns">
+      <div className="uber-uns-container">
+        {/* Text Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="team-header"
+          className="uber-uns-content"
         >
-          <h2 className="team-title">Unser Team</h2>
-          <p className="team-subtitle">
-            Lernen Sie unser freundliches und professionelles Team kennen. 
-            Jedes Mitglied bringt besondere Expertise und Leidenschaft für Haare mit.
-          </p>
+          <h2 className="uber-uns-title">Über Uns</h2>
+          
+          <div className="uber-uns-text">
+            <p>
+              Seit 2010 verwandeln wir Haare in Kunstwerke und Frisuren in Statements. 
+              Unser Salon in Berlin-Mitte ist mehr als nur ein Hairstudio - 
+              es ist ein Ort der Kreativität und Entspannung.
+            </p>
+            
+            <p>
+              Unser Team aus erfahrenen Stylisten vereint traditionelle Handwerkskunst 
+              mit modernsten Techniken. Jeder Besuch bei uns soll sich wie eine 
+              Auszeit vom Alltag anfühlen - bei bestem Service und individueller Beratung.
+            </p>
+            
+            <p>
+              Wir glauben an nachhaltige Haarpflege und verwenden ausschließlich 
+              hochwertige Produkte, die Haar und Umwelt schonen. 
+              Dein Wohlbefinden steht bei uns immer im Mittelpunkt.
+            </p>
+          </div>
         </motion.div>
         
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="team-card"
-              whileHover={{ y: -5 }}
-            >
-              <div className="team-image-container">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="team-image"
-                />
-              </div>
-              <div className="team-info">
-                <h3 className="team-name">{member.name}</h3>
-                <p className="team-role">{member.role}</p>
-                <div className="team-line"></div>
-                <p className="team-bio">{member.bio}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {/* Team Photo Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="team-photo-container"
+        >
+          <img 
+            src="https://images.unsplash.com/photo-1588514899099-e2df6951dde6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+            alt="Unser Team" 
+            className="team-photo"
+          />
+          <div className="team-photo-overlay">
+            <h3 className="team-photo-title">Unser Team</h3>
+            <p className="team-photo-subtitle">Leidenschaft für Haare seit über einem Jahrzehnt</p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

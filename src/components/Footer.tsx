@@ -8,9 +8,9 @@ export const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-about">
-            <h3>Haarstudio Schönheit</h3>
+            <h3>Creativ Hairstyling</h3>
             <p>
-              Ihr professioneller Haarsalon in Berlin für erstklassige Haarpflege und Styling.
+              Ihr professioneller Haarsalon in Leverkusen für erstklassige Haarpflege und Styling.
             </p>
             <div className="footer-social">
               <a href="#">
@@ -27,11 +27,11 @@ export const Footer = () => {
             <ul className="footer-list">
               <li>
                 <FiMapPin className="footer-icon" />
-                <span>Musterstraße 123<br />10115 Berlin</span>
+                <span>Hauptstraße 71<br />51373 Leverkusen</span>
               </li>
               <li>
                 <FiPhone className="footer-icon" />
-                <span>+49 123 456789</span>
+                <span>02148692859</span>
               </li>
               <li>
                 <FiMail className="footer-icon" />
@@ -76,7 +76,7 @@ export const Footer = () => {
 
         <div className="footer-bottom">
           <p>
-            &copy; {new Date().getFullYear()} Haarstudio Schönheit. Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Creativ Hairstyling. Alle Rechte vorbehalten.
           </p>
           <div className="footer-legal">
             <a href="#">Impressum</a>

@@ -1,37 +1,44 @@
-// components/Services.tsx
 import { motion } from 'framer-motion';
+import { 
+  FaPalette, 
+  FaCut, 
+  FaLongArrowAltRight,
+  FaSprayCan,
+  FaShower,
+  FaLeaf
+} from 'react-icons/fa';
 import '../styles/Services.css';
 
 const services = [
   {
-    title: "Damenhaarschnitte",
-    description: "Moderne und klassische Schnitte, perfekt auf Ihre Gesichtsform und Ihren Lebensstil abgestimmt.",
-    price: "ab 45€"
-  },
-  {
-    title: "Herrenhaarschnitte",
-    description: "Präzise Schnitte mit modernen Techniken für ein perfektes Ergebnis.",
-    price: "ab 35€"
-  },
-  {
     title: "Coloration",
-    description: "Natürliche oder auffällige Farben - wir verwenden nur hochwertige Produkte.",
-    price: "ab 65€"
+    description: "Du verspürst wieder Lust auf Farbe? Ob Balayage, Paintings oder Strähnen, wir beraten Dich gerne!",
+    icon: <FaPalette />
   },
   {
-    title: "Strähnen",
-    description: "Ob Balayage, Ombré oder klassische Strähnen - wir kreieren den perfekten Look.",
-    price: "ab 85€"
+    title: "Haardesign & Styling",
+    description: "Du wünschst Dir ein neues Styling? Gerne! Wir beraten Dich und schauen gemeinsam, was am besten zu Dir passt!",
+    icon: <FaCut />
   },
   {
-    title: "Haarbehandlungen",
-    description: "Intensive Pflegebehandlungen für geschädigtes Haar.",
-    price: "ab 55€"
+    title: "Extensions / Haarverlängerung",
+    description: "Hier kann Dein Traum von langen dichten Haaren in Erfüllung gehen. Inspirationen findest Du bei uns auf Instagram!",
+    icon: <FaLongArrowAltRight />
   },
   {
-    title: "Hochsteckfrisuren",
-    description: "Perfekte Frisuren für besondere Anlässe wie Hochzeiten oder Bälle.",
-    price: "ab 75€"
+    title: "Kosmetik",
+    description: "Professionelle Beauty-Behandlungen für ein strahlendes Aussehen. Wir verwenden nur hochwertige Produkte.",
+    icon: <FaSprayCan />
+  },
+  {
+    title: "Basics",
+    description: "Natürlich bieten wir Dir alle Grund-Dienstleistungen wie Styling, Schnitt und Pflege in unseren Salons an!",
+    icon: <FaShower />
+  },
+  {
+    title: "Pflege",
+    description: "Intensive Haarbehandlungen für geschädigtes Haar. Wir verwenden ausschließlich Premium-Pflegeprodukte.",
+    icon: <FaLeaf />
   }
 ];
 
@@ -48,8 +55,7 @@ export const Services = () => {
         >
           <h2 className="services-title">Unsere Dienstleistungen</h2>
           <p className="services-subtitle">
-            Entdecken Sie unser umfassendes Angebot an Haarpflege- und Stylingdienstleistungen. 
-            Jede Behandlung wird individuell auf Ihre Bedürfnisse abgestimmt.
+            Ein Lächeln bei jedem Besuch - Dein Bo'n Say Hairlounge Team!
           </p>
         </motion.div>
         
@@ -64,13 +70,12 @@ export const Services = () => {
               className="service-card"
               whileHover={{ y: -5 }}
             >
+              <div className="service-icon">
+                {service.icon}
+              </div>
               <div className="service-content">
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-description">{service.description}</p>
-                <div className="service-footer">
-                  <span className="service-price">{service.price}</span>
-                  <div className="service-line"></div>
-                </div>
               </div>
             </motion.div>
           ))}

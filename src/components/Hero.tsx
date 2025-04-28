@@ -167,7 +167,7 @@ export const Hero = () => {
           <li onClick={() => scrollToSection('home')}>HOME</li>
           <li onClick={() => scrollToSection('services')}>SERVICES</li>
           <li onClick={() => scrollToSection('team')}>TEAM</li>
-          <li onClick={() => scrollToSection('gallery')}>GALLERY</li>
+          <li onClick={() => scrollToSection('before-after')}>VORHER & NACHER</li>
           <li onClick={() => scrollToSection('pricing')}>PRICING</li>
           <li onClick={() => scrollToSection('testimonials')}>TESTIMONIALS</li>
         </ul>

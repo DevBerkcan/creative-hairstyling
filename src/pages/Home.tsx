@@ -1,6 +1,6 @@
 // pages/Home.tsx
+import { BeforeAfter } from '../components/BeforeAfter';
 import { Footer } from '../components/Footer';
-import { Gallery } from '../components/Gallery';
 import { Hero } from '../components/Hero';
 import { Partners } from '../components/Partners';
 import { PricingSection } from '../components/PricingSection';
@@ -15,7 +15,7 @@ export const Home = () => {
       <Partners />
       <Services />
       <Team />
-      <Gallery />
+      <BeforeAfter />
       <PricingSection/>
       <Testimonials />
       <Footer />

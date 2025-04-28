@@ -1,4 +1,3 @@
-/* components/Services.css */
 .services {
   padding: 8rem 0;
   background-color: var(--white);
@@ -59,17 +58,27 @@
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem;
 }
 
 .service-card:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--copper-rose);
+  margin-bottom: 1.5rem;
+}
+
 .service-content {
-  padding: 2.5rem;
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .service-title {
@@ -86,7 +95,8 @@
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 50px;
   height: 2px;
   background-color: var(--copper-rose);
@@ -94,30 +104,10 @@
 
 .service-description {
   color: var(--dark-brown);
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   line-height: 1.7;
   opacity: 0.8;
   flex-grow: 1;
-}
-
-.service-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-}
-
-.service-price {
-  color: var(--copper-rose);
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-
-.service-line {
-  flex-grow: 1;
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.1);
-  margin-left: 1.5rem;
 }
 
 .services-booking {
@@ -169,7 +159,7 @@
     padding: 5rem 0;
   }
   
-  .service-content {
+  .service-card {
     padding: 2rem;
   }
 }
