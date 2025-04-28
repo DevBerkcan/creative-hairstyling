@@ -70,17 +70,17 @@
 }
 
 .pricing-card-header {
-  padding: 1.8rem;
+  padding: 1.5rem;
   background-color: rgba(244, 240, 234, 0.7);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
 .pricing-card-header h3 {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--dark-brown);
-  margin: 0 0 1rem 0;
-  text-align: center;
+  margin: 0;
 }
 
 .length-options {
@@ -101,13 +101,13 @@
 }
 
 .pricing-items {
-  padding: 1.8rem;
+  padding: 1.5rem;
 }
 
 .pricing-item {
   display: flex;
   flex-direction: column;
-  padding: 1.2rem 0;
+  padding: 1rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
@@ -117,13 +117,15 @@
 
 .pricing-item span:first-child {
   color: var(--dark-brown);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .price-tiers {
   display: flex;
   justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .price-tiers span {
@@ -133,13 +135,18 @@
   flex: 1;
   text-align: center;
   padding: 0.3rem;
+  background-color: rgba(210, 180, 140, 0.05);
+  border-radius: 4px;
 }
 
 .pricing-value {
   color: var(--copper-rose);
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: right;
+  padding: 0.3rem;
+  background-color: rgba(210, 180, 140, 0.05);
+  border-radius: 4px;
 }
 
 .pricing-disclaimer {
@@ -163,10 +170,10 @@
   }
   
   .pricing-card-header {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
   
   .pricing-items {
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
 }

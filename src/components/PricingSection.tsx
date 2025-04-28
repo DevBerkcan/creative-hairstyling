@@ -37,7 +37,7 @@ export const PricingSection = () => {
             </div>
             <div className="pricing-items">
               <div className="pricing-item">
-                <span>Waschen, Schneiden & Föhnen</span>
+                <span>Waschen/Schneiden/Föhnen</span>
                 <div className="price-tiers">
                   <span>32 €</span>
                   <span>36 €</span>
@@ -45,7 +45,7 @@ export const PricingSection = () => {
                 </div>
               </div>
               <div className="pricing-item">
-                <span>Waschen & Schneiden</span>
+                <span>Waschen/Schneiden/Selber Föhnen</span>
                 <div className="price-tiers">
                   <span>23 €</span>
                   <span>28 €</span>
@@ -53,17 +53,33 @@ export const PricingSection = () => {
                 </div>
               </div>
               <div className="pricing-item">
-                <span>Waschen & Föhnen</span>
+                <span>Locken/Wellen/Stylung</span>
+                <div className="price-tiers">
+                  <span>24 €</span>
+                  <span>27 €</span>
+                  <span>37 €</span>
+                </div>
+              </div>
+              <div className="pricing-item">
+                <span>Waschen/Föhnen</span>
                 <div className="price-tiers">
                   <span>24 €</span>
                   <span>26 €</span>
                   <span>32 €</span>
                 </div>
               </div>
+              <div className="pricing-item">
+                <span>Brautfrisuren</span>
+                <div className="price-tiers">
+                  <span>25 €</span>
+                  <span>54 €</span>
+                  <span>75 €</span>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Herren & Kinder */}
+          {/* Herren */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -72,23 +88,59 @@ export const PricingSection = () => {
             className="pricing-card"
           >
             <div className="pricing-card-header">
-              <h3>Herren & Kinder</h3>
+              <h3>Herren</h3>
+              <div className="length-options">
+                <span>Kurz</span>
+                <span>Mittel</span>
+              </div>
             </div>
             <div className="pricing-items">
               <div className="pricing-item">
-                <span>Herren: Waschen/Schneiden/Föhnen</span>
-                <span className="pricing-value">24 €</span>
+                <span>Waschen/Schneiden/Föhnen</span>
+                <div className="price-tiers">
+                  <span>24 €</span>
+                  <span>23 €</span>
+                </div>
               </div>
               <div className="pricing-item">
-                <span>Herren: Trockenschnitt</span>
-                <span className="pricing-value">22 €</span>
+                <span>Trockenschnitt</span>
+                <div className="price-tiers">
+                  <span>46 €</span>
+                  <span>24 €</span>
+                </div>
               </div>
               <div className="pricing-item">
-                <span>Kinder: Schneiden (bis 6 Jahre)</span>
+                <span>Farbe</span>
+                <div className="price-tiers">
+                  <span>28 €</span>
+                  <span>34 €</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Kinder */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="pricing-card"
+          >
+            <div className="pricing-card-header">
+              <h3>Kinder</h3>
+            </div>
+            <div className="pricing-items">
+              <div className="pricing-item">
+                <span>Schneiden/bis 6 Jahre</span>
+                <span className="pricing-value">45 €</span>
+              </div>
+              <div className="pricing-item">
+                <span>Schneiden ab 4-14 Jahre</span>
                 <span className="pricing-value">23 €</span>
               </div>
               <div className="pricing-item">
-                <span>Kinder: Waschen/Schneiden/Föhnen</span>
+                <span>Waschen/schneiden/föhnen</span>
                 <span className="pricing-value">30 €</span>
               </div>
             </div>
@@ -99,28 +151,75 @@ export const PricingSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="pricing-card highlight"
           >
             <div className="pricing-card-header">
-              <h3>Coloration</h3>
+              <h3>Farbe</h3>
+              <div className="length-options">
+                <span>Kurz</span>
+                <span>Mittel</span>
+              </div>
             </div>
             <div className="pricing-items">
               <div className="pricing-item">
-                <span>Ansatz färben (bis 2cm)</span>
-                <span className="pricing-value">39 €</span>
+                <span>Ansatz färben bis 2cm</span>
+                <div className="price-tiers">
+                  <span>39 €</span>
+                  <span>45 €</span>
+                </div>
               </div>
               <div className="pricing-item">
-                <span>Vollfärbung</span>
-                <span className="pricing-value">45 €</span>
+                <span>Fallensträhnen (je nach Aufwand)</span>
+                <div className="price-tiers">
+                  <span>38 €</span>
+                  <span>58 €</span>
+                </div>
               </div>
               <div className="pricing-item">
                 <span>Balayage</span>
                 <span className="pricing-value">85 €</span>
               </div>
               <div className="pricing-item">
+                <span>Intensive Tonung</span>
+                <div className="price-tiers">
+                  <span>32 €</span>
+                  <span>45 €</span>
+                </div>
+              </div>
+              <div className="pricing-item">
                 <span>Blondierung</span>
-                <span className="pricing-value">ab 52 €</span>
+                <div className="price-tiers">
+                  <span>45 €</span>
+                  <span>ab 52 €</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Kosmetik */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="pricing-card"
+          >
+            <div className="pricing-card-header">
+              <h3>Kosmetik</h3>
+            </div>
+            <div className="pricing-items">
+              <div className="pricing-item">
+                <span>Augenbrauen zupfen (Faden)</span>
+                <span className="pricing-value">8 €</span>
+              </div>
+              <div className="pricing-item">
+                <span>Augenbrauen u. Wimpern (Fäden)</span>
+                <span className="pricing-value">je 8 €</span>
+              </div>
+              <div className="pricing-item">
+                <span>Gesichtshaare entfernen Vampiett</span>
+                <span className="pricing-value">48 €</span>
               </div>
             </div>
           </motion.div>
@@ -130,24 +229,28 @@ export const PricingSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="pricing-card"
           >
             <div className="pricing-card-header">
-              <h3>Haarpflege</h3>
+              <h3>Pflege</h3>
             </div>
             <div className="pricing-items">
               <div className="pricing-item">
-                <span>Olaplex Behandlung</span>
+                <span>Olaplex je nach coloration</span>
+                <span className="pricing-value">23 €</span>
+              </div>
+              <div className="pricing-item">
+                <span>Olaplex Premium</span>
+                <span className="pricing-value">58 €</span>
+              </div>
+              <div className="pricing-item">
+                <span>Pflegebehandlung Premium</span>
                 <span className="pricing-value">23 €</span>
               </div>
               <div className="pricing-item">
                 <span>Intensiv Haarkur</span>
                 <span className="pricing-value">10 €</span>
-              </div>
-              <div className="pricing-item">
-                <span>Keratin Behandlung</span>
-                <span className="pricing-value">ab 150 €</span>
               </div>
             </div>
           </motion.div>
@@ -157,7 +260,7 @@ export const PricingSection = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
             className="pricing-card"
           >
             <div className="pricing-card-header">
@@ -172,28 +275,9 @@ export const PricingSection = () => {
                 <span>Haarverlängerung</span>
                 <span className="pricing-value">ab 300 €</span>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Kosmetik */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="pricing-card"
-          >
-            <div className="pricing-card-header">
-              <h3>Kosmetik</h3>
-            </div>
-            <div className="pricing-items">
               <div className="pricing-item">
-                <span>Augenbrauen zupfen</span>
-                <span className="pricing-value">8 €</span>
-              </div>
-              <div className="pricing-item">
-                <span>Gesichtshaare entfernen</span>
-                <span className="pricing-value">48 €</span>
+                <span>Keratin Behandlung</span>
+                <span className="pricing-value">ab 150 €</span>
               </div>
             </div>
           </motion.div>
