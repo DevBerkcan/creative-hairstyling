@@ -1,46 +1,49 @@
 import { motion } from 'framer-motion';
-import { 
-  FaPalette, 
-  FaCut, 
-  FaLongArrowAltRight,
-  FaSprayCan,
-  FaShower,
-  FaLeaf
-} from 'react-icons/fa';
+
+import {
+  TbColorSwatch,
+  TbScissors,
+  TbWind,
+  TbBottle,
+  TbCut,
+  TbPlant2
+} from 'react-icons/tb';
+
 import '../styles/Services.css';
 
 const services = [
   {
-    title: "Coloration",
+    title: "Farbe",
     description: "Du verspürst wieder Lust auf Farbe? Ob Balayage, Paintings oder Strähnen, wir beraten Dich gerne!",
-    icon: <FaPalette />
+    icon: <TbColorSwatch />
   },
   {
-    title: "Haardesign & Styling",
+    title: "Styling",
     description: "Du wünschst Dir ein neues Styling? Gerne! Wir beraten Dich und schauen gemeinsam, was am besten zu Dir passt!",
-    icon: <FaCut />
+    icon: <TbScissors />
   },
   {
-    title: "Extensions / Haarverlängerung",
+    title: "Haarverlängerung",
     description: "Hier kann Dein Traum von langen dichten Haaren in Erfüllung gehen. Inspirationen findest Du bei uns auf Instagram!",
-    icon: <FaLongArrowAltRight />
+    icon: <TbWind />
   },
   {
     title: "Kosmetik",
     description: "Professionelle Beauty-Behandlungen für ein strahlendes Aussehen. Wir verwenden nur hochwertige Produkte.",
-    icon: <FaSprayCan />
+    icon: <TbBottle />
   },
   {
     title: "Basics",
     description: "Natürlich bieten wir Dir alle Grund-Dienstleistungen wie Styling, Schnitt und Pflege in unseren Salons an!",
-    icon: <FaShower />
+    icon: <TbCut />
   },
   {
     title: "Pflege",
     description: "Intensive Haarbehandlungen für geschädigtes Haar. Wir verwenden ausschließlich Premium-Pflegeprodukte.",
-    icon: <FaLeaf />
+    icon: <TbPlant2 />
   }
 ];
+
 
 export const Services = () => {
   return (
