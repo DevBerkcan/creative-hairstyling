@@ -3,11 +3,7 @@ import { motion } from 'framer-motion';
 import '../styles/PricingSection.css';
 import { Link } from 'react-router-dom';
 
-interface PricingSectionProps {
-  fullPage?: boolean;
-}
-
-export const PricingSection = ({ fullPage = false }: PricingSectionProps) => {
+export const PricingSection = () => {
   return (
 <section id="pricing" className="pricing-section">
       <div className="pricing-container">
@@ -300,6 +296,15 @@ export const PricingSection = ({ fullPage = false }: PricingSectionProps) => {
           <p>** Kostenlose Beratungstermine verfügbar.</p>
         </motion.div>
       </div>
+      {/* Vertical navigation menu - connected to sections */}
+        <nav className="hero-vertical-nav">
+        <ul>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/pricing">PRICING</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li> 
+          <li><Link to="/gallery">GALLERY</Link></li> 
+        </ul>
+      </nav>
     </section>
   );
 };
