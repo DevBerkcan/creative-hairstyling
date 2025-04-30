@@ -1,9 +1,15 @@
+// components/PricingSection.tsx
 import { motion } from 'framer-motion';
 import '../styles/PricingSection.css';
+import { Link } from 'react-router-dom';
 
-export const PricingSection = () => {
+interface PricingSectionProps {
+  fullPage?: boolean;
+}
+
+export const PricingSection = ({ fullPage = false }: PricingSectionProps) => {
   return (
-    <section id="pricing" className="pricing-section">
+<section id="pricing" className="pricing-section">
       <div className="pricing-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

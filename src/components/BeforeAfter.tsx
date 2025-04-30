@@ -7,6 +7,7 @@ import nacher2 from "../assets/nacher2.jpg";
 import vorher3 from "../assets/vorher3.jpg";
 import nacher3 from "../assets/nacher3.jpg";
 import "../styles/BeforeAfter.css";
+import { Link } from "react-router-dom";
 
 const transformations = [
   {
@@ -56,6 +57,9 @@ export const BeforeAfter = () => {
             Entdecken Sie unsere Transformationsergebnisse - bewegen Sie den
             Slider, um den Unterschied zu sehen!
           </p>
+          <Link to="/gallery" className="gallery-button">
+            Galerie
+          </Link>
         </motion.div>
 
         <div className="before-after-grid">

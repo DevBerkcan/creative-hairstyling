@@ -1,0 +1,111 @@
+.contact-page {
+    background-color: var(--sand-beige);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    flex: 1;
+  }
+  
+  .back-button {
+    display: inline-block;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    color: var(--copper-rose);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--copper-rose);
+  }
+  
+  .back-button:hover {
+    background-color: var(--copper-rose);
+    color: white;
+  }
+  
+  .contact-content {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-title {
+    color: var(--dark-brown);
+    font-family: var(--font-heading);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .contact-details {
+    margin-bottom: 2rem;
+  }
+  
+  .contact-address, 
+  .contact-phone, 
+  .contact-email {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--dark-brown);
+  }
+  
+  .opening-hours {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+  
+  .opening-hours h3 {
+    color: var(--dark-brown);
+    margin-bottom: 1rem;
+  }
+  
+  .opening-hours p {
+    margin-bottom: 0.5rem;
+    color: var(--dark-brown);
+  }
+  
+  .contact-image-container {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .map-container {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+    }
+    
+    .contact-title {
+      font-size: 2rem;
+    }
+    
+    .contact-info, 
+    .contact-image-container {
+      min-width: 100%;
+    }
+  }

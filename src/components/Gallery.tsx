@@ -1,37 +1,99 @@
 // components/Gallery.tsx
 import { motion } from 'framer-motion';
+import vorher1 from "../assets/vorher1.jpg";
+import nachher1 from "../assets/nacher1.jpg";
+import vorher2 from "../assets/vorher2.jpg";
+import nachher2 from "../assets/nacher2.jpg";
+import vorher3 from "../assets/vorher3.jpg";
+import nachher3 from "../assets/nacher3.jpg";
 import '../styles/Gallery.css';
 
 const galleryImages = [
   { 
-    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: vorher1, 
+    alt: "Vorher: Natürliches Braun",
+    category: "Coloration",
+    type: "before"
+  },
+  { 
+    src: nachher1, 
+    alt: "Nachher: Helles Balayage",
+    category: "Coloration",
+    type: "after"
+  },
+  { 
+    src: vorher2, 
+    alt: "Vorher: Lockiges Haar",
+    category: "Glättung",
+    type: "before"
+  },
+  { 
+    src: nachher2, 
+    alt: "Nachher: Glattes Haar",
+    category: "Glättung",
+    type: "after"
+  },
+  { 
+    src: vorher3, 
+    alt: "Vorher: Kurzer Schnitt",
+    category: "Haarschnitt",
+    type: "before"
+  },
+  { 
+    src: nachher3, 
+    alt: "Nachher: Moderner Styling",
+    category: "Haarschnitt",
+    type: "after"
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Damenhaarschnitt",
     category: "Schnitte"
   },
   { 
-    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Coloration",
     category: "Farbe"
   },
   { 
-    src: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Herrenschnitt",
     category: "Schnitte"
   },
   { 
-    src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Hochsteckfrisur",
     category: "Styling"
   },
   { 
-    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Haarbehandlung",
     category: "Pflege"
   },
   { 
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80", 
+    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
     alt: "Strähnen",
     category: "Farbe"
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
+    alt: "Brautfrisur",
+    category: "Styling"
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
+    alt: "Brautfrisur",
+    category: "Styling"
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
+    alt: "Kinderhaarschnitt",
+    category: "Schnitte"
+  },
+  { 
+    src: "https://images.unsplash.com/photo-1596704017255-ee7b0a8640d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
+    alt: "Bartpflege",
+    category: "Herren"
   }
 ];
 
@@ -52,6 +114,15 @@ export const Gallery = () => {
           </p>
         </motion.div>
 
+        <div className="gallery-filters">
+          <button className="filter-button active">Alle</button>
+          <button className="filter-button">Schnitte</button>
+          <button className="filter-button">Farbe</button>
+          <button className="filter-button">Styling</button>
+          <button className="filter-button">Pflege</button>
+          <button className="filter-button">Vorher/Nachher</button>
+        </div>
+
         <div className="gallery-grid">
           {galleryImages.map((image, index) => (
             <motion.div
@@ -60,7 +131,7 @@ export const Gallery = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "0px 0px -100px 0px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="gallery-item"
+              className={`gallery-item ${image.type ? image.type : ''}`}
               whileHover={{ scale: 1.02 }}
             >
               <img 
@@ -70,6 +141,11 @@ export const Gallery = () => {
                 loading="lazy"
               />
               <div className="gallery-caption">
+                {image.type && (
+                  <span className={`gallery-type ${image.type}`}>
+                    {image.type === 'before' ? 'Vorher' : 'Nachher'}
+                  </span>
+                )}
                 <span className="gallery-category">{image.category}</span>
                 <h3 className="gallery-image-title">{image.alt}</h3>
               </div>

@@ -4,6 +4,7 @@ import "../styles/Hero.css";
 import backgroundImage1 from "../assets/frisur.jpg";
 import backgroundImage2 from "../assets/gettyimages-450245049_sf.webp";
 import { FaPhone, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -164,11 +165,13 @@ export const Hero = () => {
       {/* Vertical navigation menu - connected to sections */}
       <nav className="hero-vertical-nav">
         <ul>
-          <li onClick={() => scrollToSection('home')}>HOME</li>
+          <li><Link to="/">HOME</Link></li>
           <li onClick={() => scrollToSection('services')}>SERVICES</li>
           <li onClick={() => scrollToSection('team')}>TEAM</li>
           <li onClick={() => scrollToSection('before-after')}>VORHER & NACHER</li>
-          <li onClick={() => scrollToSection('pricing')}>PRICING</li>
+          <li><Link to="/pricing">PRICING</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li> 
+          <li><Link to="/gallery">GALLERY</Link></li> 
           <li onClick={() => scrollToSection('testimonials')}>TESTIMONIALS</li>
         </ul>
       </nav>
