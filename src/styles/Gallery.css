@@ -50,6 +50,27 @@
   margin-bottom: 2.5rem;
 }
 
+.gallery-button-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.gallery-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--gold-ochre);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+  background-color: var(--copper-rose);
+}
+
 .filter-button {
   padding: 0.5rem 1.2rem;
   background: transparent;

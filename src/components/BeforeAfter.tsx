@@ -57,9 +57,6 @@ export const BeforeAfter = () => {
             Entdecken Sie unsere Transformationsergebnisse - bewegen Sie den
             Slider, um den Unterschied zu sehen!
           </p>
-          <Link to="/gallery" className="gallery-button">
-            Galerie
-          </Link>
         </motion.div>
 
         <div className="before-after-grid">
@@ -122,6 +119,12 @@ export const BeforeAfter = () => {
             </motion.div>
           ))}
         </div>
+    {/* 🟡 Moved Galerie button here */}
+    <div className="gallery-button-container">
+      <Link to="/gallery" className="gallery-button">
+        Gesamte Galerie
+      </Link>
+    </div>
       </div>
     </section>
   );
