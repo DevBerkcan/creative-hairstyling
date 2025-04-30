@@ -120,7 +120,7 @@ export const Hero = () => {
                 href={activeSlide === 0 ? "https://booking-provider.com/haarstudio-schoenheit" : "#services"}
                 target={activeSlide === 0 ? "_blank" : "_self"}
                 rel="noopener noreferrer"
-                className="hero-button hero-button-primary"
+                className="booking-button"
                 whileHover={{ 
                   scale: 1.05,
                   boxShadow: "0px 5px 15px rgba(0,0,0,0.2)"

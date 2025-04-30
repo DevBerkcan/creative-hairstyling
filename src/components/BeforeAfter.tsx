@@ -119,12 +119,11 @@ export const BeforeAfter = () => {
             </motion.div>
           ))}
         </div>
-    {/* 🟡 Moved Galerie button here */}
-    <div className="gallery-button-container">
-      <Link to="/gallery" className="gallery-button">
-        Gesamte Galerie
-      </Link>
-    </div>
+        <div className="gallery-button-container">
+          <Link to="/gallery" className="booking-button">
+            Gesamte Galerie
+          </Link>
+        </div>
       </div>
     </section>
   );
