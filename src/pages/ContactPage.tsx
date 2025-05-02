@@ -39,7 +39,7 @@ export const ContactPage = () => {
                 </div>
                 <div className="contact-item">
                   <FiMail className="contact-icon" />
-                  <a href="mailto:info@haarstudio-schoenheit.de">info@haarstudio-schoenheit.de</a>
+                  <a href="mailto:salon@creativhairstling.de">salon@creativhairstling.de</a>
                 </div>
               </div>
               <div className="opening-hours">

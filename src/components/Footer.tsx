@@ -38,7 +38,7 @@ export const Footer = () => {
               </li>
               <li className="footer-item">
                 <FiMail className="footer-icon" />
-                <a href="mailto:info@haarstudio-schoenheit.de">info@haarstudio-schoenheit.de</a>
+                <a href="mailto:salon@creativhairstling.de">salon@creativhairstling.de</a>
               </li>
             </ul>
           </div>
