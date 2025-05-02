@@ -7,6 +7,9 @@ import nachher2 from "../assets/nacher2.jpg";
 import vorher3 from "../assets/vorher3.jpg";
 import nachher3 from "../assets/nacher3.jpg";
 import '../styles/Gallery.css';
+import { Link } from 'react-router-dom';
+import { Footer } from './Footer';
+import { useEffect } from 'react';
 
 const galleryImages = [
   { 
@@ -90,15 +93,14 @@ const galleryImages = [
     alt: "Kinderhaarschnitt",
     category: "Schnitte"
   },
-  { 
-    src: "https://images.unsplash.com/photo-1596704017255-ee7b0a8640d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80", 
-    alt: "Bartpflege",
-    category: "Herren"
-  }
 ];
 
 export const Gallery = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   return (
+    <div>
     <section id="gallery" className="gallery">
       <div className="gallery-container">
         <motion.div
@@ -152,7 +154,17 @@ export const Gallery = () => {
             </motion.div>
           ))}
         </div>
+        <nav className="hero-vertical-nav">
+        <ul>
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/pricing">PRICING</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li> 
+        </ul>
+      </nav>
       </div>
+
     </section>
+    <Footer />
+    </div>
   );
 };

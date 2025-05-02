@@ -1,111 +1,153 @@
 .contact-page {
-    background-color: var(--sand-beige);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-    flex: 1;
-  }
-  
-  .back-button {
-    display: inline-block;
-    margin-bottom: 2rem;
-    padding: 0.5rem 1rem;
-    color: var(--copper-rose);
-    text-decoration: none;
-    font-weight: 500;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--copper-rose);
-  }
-  
-  .back-button:hover {
-    background-color: var(--copper-rose);
-    color: white;
+  background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-brown);
+  font-family: var(--font-body);
+  width: 100%;
+}
+
+.contact-container {
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0;
+  flex: 1;
+}
+
+.contact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.contact-content {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-title {
+  color: var(--dark-brown);
+  font-family: var(--font-heading);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.contact-details {
+  margin-bottom: 3rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-icon {
+  color: var(--copper-rose);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--dark-brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: var(--copper-rose);
+}
+
+.opening-hours {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hours-title {
+  color: var(--dark-brown);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.hours-icon {
+  color: var(--copper-rose);
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.contact-image-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  max-height: 500px;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 0 1rem;
   }
   
   .contact-content {
-    display: flex;
-    gap: 3rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
-  
-  .contact-info {
-    flex: 1;
-    min-width: 300px;
+    flex-direction: column;
   }
   
   .contact-title {
-    color: var(--dark-brown);
-    font-family: var(--font-heading);
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   
-  .contact-details {
-    margin-bottom: 2rem;
-  }
-  
-  .contact-address, 
-  .contact-phone, 
-  .contact-email {
-    margin-bottom: 1rem;
-    line-height: 1.6;
-    color: var(--dark-brown);
-  }
-  
-  .opening-hours {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 1.5rem;
-    border-radius: 8px;
-  }
-  
-  .opening-hours h3 {
-    color: var(--dark-brown);
-    margin-bottom: 1rem;
-  }
-  
-  .opening-hours p {
-    margin-bottom: 0.5rem;
-    color: var(--dark-brown);
-  }
-  
+  .contact-info, 
   .contact-image-container {
-    flex: 1;
-    min-width: 300px;
+    min-width: 100%;
   }
   
-  .contact-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  .hours-item {
+    flex-direction: column;
+    gap: 0.3rem;
   }
-  
-  .map-container {
-    margin-top: 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  @media (max-width: 768px) {
-    .contact-content {
-      flex-direction: column;
-    }
-    
-    .contact-title {
-      font-size: 2rem;
-    }
-    
-    .contact-info, 
-    .contact-image-container {
-      min-width: 100%;
-    }
-  }
+}

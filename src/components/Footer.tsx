@@ -48,15 +48,15 @@ export const Footer = () => {
             <ul className="footer-list">
               <li className="footer-item">
                 <FiClock className="footer-icon" />
-                <span>Mo-Fr: 9:00 - 19:00 Uhr</span>
+                <span>Dienstag-Freitag: 9:00 - 18:00 Uhr</span>
               </li>
               <li className="footer-item">
                 <FiClock className="footer-icon" />
-                <span>Sa: 10:00 - 16:00 Uhr</span>
+                <span>Samstag: 9:00 - 15:00 Uhr</span>
               </li>
               <li className="footer-item">
                 <FiClock className="footer-icon" />
-                <span>So: Geschlossen</span>
+                <span>Sonntag und Montag: Geschlossen</span>
               </li>
             </ul>
           </div>
@@ -66,8 +66,8 @@ export const Footer = () => {
             <ul className="footer-links">
               <li><a href="#home" className="footer-link">Startseite</a></li>
               <li><a href="#services" className="footer-link">Leistungen</a></li>
-              <li><a href="#team" className="footer-link">Team</a></li>
-              <li><a href="#gallery" className="footer-link">Galerie</a></li>
+              <li><a href="#ueber-uns" className="footer-link">Team</a></li>
+              <li><a href="#before-after" className="footer-link">Vorher & Nacher</a></li>
               <li>
                 <a 
                   href="https://booking-provider.com/haarstudio-schoenheit" 

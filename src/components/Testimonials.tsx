@@ -4,22 +4,19 @@ import '../styles/Testimonials.css';
 
 const testimonials = [
   {
-    name: "Sarah K.",
-    role: "Stammkundin",
-    content: "Ich gehe seit Jahren zu Anna und war noch nie enttäuscht. Das Team ist super freundlich und die Ergebnisse immer perfekt!",
+    name: "Jennifer Adolphs",
+    content: "Sehr zu empfehlen! Nette Chefin & Mitarbeiter. Ich persönlich stelle mich als Modell für die Ausbildung zur Verfügung und bin sehr zufrieden. Natürlich ist es aufgrund der Ausbildung zeitintensiver, was aber auch so sein muss! Man bekommt dann auch mit wie andere Kunden bedient werden, was die gute Atmosphäre & Professonalität wiederspiegelt. Ich kann es nur empfehlen, vielleicht stellt sich jemand , der das jetzt liest, auch als Modell zur Verfügung",
     rating: 5
   },
   {
-    name: "Michael B.",
-    role: "Neukunde",
-    content: "Der beste Herrenschnitt, den ich je hatte. Markus hat sich viel Zeit genommen und genau zugehört, was ich wollte.",
+    name: "Mira Boutique",
+    content: "Super tolle Chefin und Mitarbeiterinnen. Sehr sympathisch und freundlich. Man hat sich sehr wohl und willkommen gefühlt. Sie haben auch einen Bereich für Hijabis und waren sehr hilfsbereit. Der Schnitt war der beste Schnitt den ich bisher hatte und Föhnen war auch top. Sehr sehr zufrieden und komme aufjedenfall wieder.",
     rating: 5
   },
   {
-    name: "Julia W.",
-    role: "Kundin",
-    content: "Meine Balayage-Strähnen sehen absolut natürlich aus. Lisa ist eine echte Künstlerin! Der Salon hat eine wundervolle Atmosphäre.",
-    rating: 4
+    name: "Isabella Baumann",
+    content: "Ich bin am 16.06.23 verzweifelt in den Friseurladen gekommen😭 mir wurde von zwei vorherigen Friseursalons mitgeteilt dass man meinen schwarzen Ansatz 🤣😂🤣😂( ist jetzt unser persönlicher Insider ) leider nicht hell bekommt.\nIch war natürlich verzweifelt ,da ich wieder schönes blondes Haar haben wollte.\nMir wurde von Fatma und ihrer Mitarbeiterin sofort zugesichert ,dass man das selbstverständlich hinbekommt und ich mir keine Sorgen machen muss.\nIch war bei Fatma und ihrem Team in den besten Händen 🥰🫶 seitdem geh ich nirgendwo anders mehr hin ☺️ man fühlt sich absolut sicher aufgehoben.\nEs ist eine sehr gemütlich warme Atmosphäre.\nMan hat immer was zu quatschen und zu lachen😊🫶",
+    rating: 5
   }
 ];
 
@@ -74,7 +71,6 @@ export const Testimonials = () => {
                 <div className="testimonial-author">
                   <div className="author-info">
                     <h4 className="author-name">{testimonial.name}</h4>
-                    <p className="author-role">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
