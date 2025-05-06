@@ -92,7 +92,7 @@ export const Services = () => {
           className="services-booking"
         >
           <a 
-            href="https://booking-provider.com/haarstudio-schoenheit" 
+            href="https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962" 
             target="_blank"
             rel="noopener noreferrer"
             className="booking-button"

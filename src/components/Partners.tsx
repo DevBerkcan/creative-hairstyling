@@ -1,48 +1,67 @@
-
 import "../styles/Partners.css";
-import { 
-  FaAmazon, 
-  FaFacebook, 
-  FaTwitter, 
-  FaDiscord, 
-  FaYoutube,
-  FaApple,
-  FaGoogle,
-  FaMicrosoft,
-  FaSpotify,
-  FaInstagram,
-  FaPinterest,
-  FaLinkedin,
-  FaTiktok
-} from "react-icons/fa";
+import { motion } from "framer-motion";
+import bergrath from "../assets/bergrath.svg";
+import echos from "../assets/echos2.jpg";
+import ghd from "../assets/ghd.jpeg";
+import hi from "../assets/hi.png";
+import milbon from "../assets/milbon2.jpg";
 
 const partners = [
-  { name: "Amazon", icon: <FaAmazon /> },
-  { name: "Facebook", icon: <FaFacebook /> },
-  { name: "Twitter", icon: <FaTwitter /> },
-  { name: "Discord", icon: <FaDiscord /> },
-  { name: "YouTube", icon: <FaYoutube /> },
-  { name: "Apple", icon: <FaApple /> },
-  { name: "Google", icon: <FaGoogle /> },
-  { name: "Microsoft", icon: <FaMicrosoft /> },
-  { name: "Spotify", icon: <FaSpotify /> },
-  { name: "Instagram", icon: <FaInstagram /> },
-  { name: "Pinterest", icon: <FaPinterest /> },
-  { name: "LinkedIn", icon: <FaLinkedin /> },
-  { name: "TikTok", icon: <FaTiktok /> },
+  { 
+    name: "Bergrath", 
+    logo: bergrath,
+    alt: "Bergrath Professional Haircare Logo"
+  },
+  { 
+    name: "Echos", 
+    logo: echos,
+    alt: "Echos Hair Products Logo"
+  },
+  { 
+    name: "GHD", 
+    logo: ghd,
+    alt: "GHD Hair Tools Logo"
+  },
+  { 
+    name: "HI", 
+    logo: hi,
+    alt: "HI Haircare Logo"
+  },
+  { 
+    name: "Milbon", 
+    logo: milbon,
+    alt: "Milbon Professional Haircare Logo"
+  }
 ];
 
 export const Partners = () => {
   return (
     <section className="partners-section">
       <div className="partners-container">
-        <div className="partners-track">
+        <motion.div 
+          className="partners-track"
+          initial={{ x: 0 }}
+          animate={{ x: '-50%' }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        >
           {[...partners, ...partners].map((partner, index) => (
-            <div key={`${partner.name}-${index}`} className="partner-logo">
-              {partner.icon}
-            </div>
+            <motion.div 
+              key={`${partner.name}-${index}`} 
+              className="partner-logo"
+              whileHover={{ scale: 1.1 }}
+            >
+              <img 
+                src={partner.logo} 
+                alt={partner.alt}
+                className="partner-image"
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
