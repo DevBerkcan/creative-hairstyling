@@ -98,7 +98,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://booking-provider.com/haarstudio-schoenheit"
+                  href="https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962"
                   className="footer-link footer-booking"
                 >
                   Online Termin

@@ -8,8 +8,8 @@ import vorher3 from "../assets/vorher3.jpg";
 import nachher3 from "../assets/nacher3.jpg";
 import '../styles/Gallery.css';
 import { Link } from 'react-router-dom';
-import { Footer } from './Footer';
 import { useEffect } from 'react';
+import { Footer } from '../components/Footer';
 
 const galleryImages = [
   { 

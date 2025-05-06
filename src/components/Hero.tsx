@@ -68,13 +68,13 @@ export const Hero = () => {
     <section id="home" className="hero" ref={ref}>
       {/* Top left icons */}
       <div className="hero-top-icons">
-        <a href="tel:+123456789" className="hero-icon-link">
+        <a href="tel:02148692859" className="hero-icon-link">
           <FaPhone className="hero-icon" />
         </a>
-        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+        <a href="https://www.google.com/maps/place/Creativ+Hairstyling/@51.0313099,6.9793577,547m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bf2eed754b316d:0x9712bb3a046bb38b!8m2!3d51.0313066!4d6.9819326!16s%2Fg%2F1tkks_jc?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
           <FaMapMarkerAlt className="hero-icon" />
         </a>
-        <a href="https://booking-provider.com/haarstudio-schoenheit" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+        <a href="https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
           <FaCalendarAlt className="hero-icon" />
         </a>
       </div>
@@ -117,7 +117,7 @@ export const Hero = () => {
             </p>
             <div className="hero-buttons">
               <motion.a
-                href={activeSlide === 0 ? "https://booking-provider.com/haarstudio-schoenheit" : "#services"}
+                href={activeSlide === 0 ? "https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962" : "#services"}
                 target={activeSlide === 0 ? "_blank" : "_self"}
                 rel="noopener noreferrer"
                 className="booking-button"

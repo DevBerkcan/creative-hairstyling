@@ -2,10 +2,10 @@
 import { motion } from "framer-motion";
 import "../styles/PricingSection.css";
 import { Link } from "react-router-dom";
-import { Footer } from "./Footer";
 import { useEffect } from "react";
+import { Footer } from "../components/Footer";
 
-export const PricingSection = () => {
+export const PricingPage = () => {
 
     useEffect(() => {
       window.scrollTo(0, 0);
@@ -107,22 +107,22 @@ export const PricingSection = () => {
                 <div className="pricing-item">
                   <span>Waschen/Schneiden/Föhnen</span>
                   <div className="price-tiers">
-                    <span>24 €</span>
+                    <span>21 €</span>
                     <span>23 €</span>
                   </div>
                 </div>
                 <div className="pricing-item">
                   <span>Trockenschnitt</span>
                   <div className="price-tiers">
-                    <span>46 €</span>
-                    <span>24 €</span>
+                    <span>16 €</span>
+                    <span>21 €</span>
                   </div>
                 </div>
                 <div className="pricing-item">
                   <span>Farbe</span>
                   <div className="price-tiers">
                     <span>28 €</span>
-                    <span>34 €</span>
+                    <span>31 €</span>
                   </div>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export const PricingSection = () => {
               <div className="pricing-items">
                 <div className="pricing-item">
                   <span>Schneiden/bis 6 Jahre</span>
-                  <span className="pricing-value">45 €</span>
+                  <span className="pricing-value">15 €</span>
                 </div>
                 <div className="pricing-item">
                   <span>Schneiden ab 4-14 Jahre</span>
@@ -168,6 +168,7 @@ export const PricingSection = () => {
                 <div className="length-options">
                   <span>Kurz</span>
                   <span>Mittel</span>
+                  <span>Lang</span>
                 </div>
               </div>
               <div className="pricing-items">
@@ -176,6 +177,7 @@ export const PricingSection = () => {
                   <div className="price-tiers">
                     <span>39 €</span>
                     <span>45 €</span>
+                    <span>    </span>
                   </div>
                 </div>
                 <div className="pricing-item">
@@ -183,17 +185,23 @@ export const PricingSection = () => {
                   <div className="price-tiers">
                     <span>38 €</span>
                     <span>58 €</span>
+                    <span>68 €</span>
                   </div>
                 </div>
                 <div className="pricing-item">
                   <span>Balayage</span>
-                  <span className="pricing-value">85 €</span>
+                  <div className="price-tiers">
+                    <span>    </span>
+                    <span>85 €</span>
+                    <span>95 €</span>
+                  </div>
                 </div>
                 <div className="pricing-item">
                   <span>Intensive Tonung</span>
                   <div className="price-tiers">
                     <span>32 €</span>
                     <span>45 €</span>
+                    <span>55/75 €</span>
                   </div>
                 </div>
                 <div className="pricing-item">
@@ -201,6 +209,7 @@ export const PricingSection = () => {
                   <div className="price-tiers">
                     <span>45 €</span>
                     <span>ab 52 €</span>
+                    <span>ab 65 €</span>
                   </div>
                 </div>
               </div>
@@ -219,16 +228,16 @@ export const PricingSection = () => {
               </div>
               <div className="pricing-items">
                 <div className="pricing-item">
-                  <span>Augenbrauen zupfen (Faden)</span>
+                  <span>Augenbrauen zupfen</span>
                   <span className="pricing-value">8 €</span>
                 </div>
                 <div className="pricing-item">
-                  <span>Augenbrauen u. Wimpern (Fäden)</span>
+                  <span>Augenbrauen u. Wimpern</span>
                   <span className="pricing-value">je 8 €</span>
                 </div>
                 <div className="pricing-item">
-                  <span>Gesichtshaare entfernen Vampiett</span>
-                  <span className="pricing-value">48 €</span>
+                  <span>Gesichtshaare entfernen komplett</span>
+                  <span className="pricing-value">18 €</span>
                 </div>
               </div>
             </motion.div>
