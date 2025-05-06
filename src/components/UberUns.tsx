@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import '../styles/Team.css';
 
-export const Team = () => {
+export const UberUns = () => {
   return (
     <section id="uber-uns" className="uber-uns">
       <div className="uber-uns-container">

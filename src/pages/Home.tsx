@@ -4,8 +4,8 @@ import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
 import { Partners } from '../components/Partners';
 import { Services } from '../components/Services';
-import { Team } from '../components/Team';
 import { Testimonials } from '../components/Testimonials';
+import { UberUns } from '../components/UberUns';
 
 export const Home = () => {
   return (
@@ -13,7 +13,7 @@ export const Home = () => {
       <Hero />
       <Partners />
       <Services />
-      <Team />
+      <UberUns />
       <BeforeAfter />
       <Testimonials />
       <Footer />
