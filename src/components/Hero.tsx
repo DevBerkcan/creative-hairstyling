@@ -166,8 +166,8 @@ export const Hero = () => {
       <nav className="hero-vertical-nav">
         <ul>
           <li onClick={() => scrollToSection('home')}>HOME</li>
-          <li onClick={() => scrollToSection('services')}>SERVICES</li>
-          <li onClick={() => scrollToSection('uber-uns')}>TEAM</li>
+          <li onClick={() => scrollToSection('services')}>LEISTUNGEN</li>
+          <li onClick={() => scrollToSection('uber-uns')}>ÜBER UNS</li>
           <li onClick={() => scrollToSection('before-after')}>VORHER & NACHER</li>
           <li onClick={() => scrollToSection('testimonials')}>TESTIMONIALS</li>
           <li><Link to="/pricing">PRICING</Link></li>

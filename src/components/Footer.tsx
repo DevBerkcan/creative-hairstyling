@@ -1,5 +1,13 @@
-import { FiMapPin, FiPhone, FiMail, FiClock, FiInstagram, FiFacebook } from 'react-icons/fi';
-import '../styles/Footer.css';
+import {
+  FiMapPin,
+  FiPhone,
+  FiMail,
+  FiClock,
+  FiInstagram,
+  FiFacebook,
+} from "react-icons/fi";
+import "../styles/Footer.css";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -10,7 +18,8 @@ export const Footer = () => {
           <div className="footer-about">
             <h3 className="footer-logo">Creativ Hairstyling</h3>
             <p className="footer-description">
-              Ihr professioneller Haarsalon in Leverkusen für erstklassige Haarpflege und modernes Styling.
+              Ihr professioneller Haarsalon in Leverkusen für erstklassige
+              Haarpflege und modernes Styling.
             </p>
             <div className="footer-social">
               <a href="#" aria-label="Instagram" className="social-icon">
@@ -28,7 +37,8 @@ export const Footer = () => {
               <li className="footer-item">
                 <FiMapPin className="footer-icon" />
                 <address>
-                  Hauptstraße 71<br />
+                  Hauptstraße 71
+                  <br />
                   51373 Leverkusen
                 </address>
               </li>
@@ -38,7 +48,9 @@ export const Footer = () => {
               </li>
               <li className="footer-item">
                 <FiMail className="footer-icon" />
-                <a href="mailto:salon@creativhairstling.de">salon@creativhairstling.de</a>
+                <a href="mailto:salon@creativhairstling.de">
+                  salon@creativhairstling.de
+                </a>
               </li>
             </ul>
           </div>
@@ -64,13 +76,29 @@ export const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Navigation</h4>
             <ul className="footer-links">
-              <li><a href="#home" className="footer-link">Startseite</a></li>
-              <li><a href="#services" className="footer-link">Leistungen</a></li>
-              <li><a href="#ueber-uns" className="footer-link">Team</a></li>
-              <li><a href="#before-after" className="footer-link">Vorher & Nacher</a></li>
               <li>
-                <a 
-                  href="https://booking-provider.com/haarstudio-schoenheit" 
+                <a href="#home" className="footer-link">
+                  Startseite
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="footer-link">
+                  Leistungen
+                </a>
+              </li>
+              <li>
+                <a href="#ueber-uns" className="footer-link">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#before-after" className="footer-link">
+                  Vorher & Nacher
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://booking-provider.com/haarstudio-schoenheit"
                   className="footer-link footer-booking"
                 >
                   Online Termin
@@ -82,12 +110,13 @@ export const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            &copy; {new Date().getFullYear()} Creativ Hairstyling. Alle Rechte vorbehalten.
+            &copy; {new Date().getFullYear()} Creativ Hairstyling. Alle Rechte
+            vorbehalten.
           </p>
           <div className="footer-legal">
-            <a href="#" className="legal-link">Impressum</a>
-            <a href="#" className="legal-link">Datenschutz</a>
-            <a href="#" className="legal-link">AGB</a>
+            <Link to="/impressum">Impressum</Link>
+            <Link to="/datenschutz">Datenschutz</Link>
+            <Link to="/agb">AGB</Link>
           </div>
         </div>
       </div>

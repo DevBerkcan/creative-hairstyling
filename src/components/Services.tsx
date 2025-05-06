@@ -56,7 +56,7 @@ export const Services = () => {
           transition={{ duration: 0.6 }}
           className="services-header"
         >
-          <h2 className="services-title">Unsere Dienstleistungen</h2>
+          <h2 className="services-title">Unsere Leistungen</h2>
           <p className="services-subtitle">
             Ein Lächeln bei jedem Besuch - Dein Creativ Hairstyling Team!
           </p>
