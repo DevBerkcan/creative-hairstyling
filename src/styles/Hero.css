@@ -161,14 +161,21 @@
   color: var(--white);
 }
 
-/* Slider navigation */
+/* Updated CSS for centered slider navigation */
 .hero-slider-nav {
   position: absolute;
   bottom: 40px;
-  left: 40px;
+  left: 0;
+  right: 0;
   z-index: 20;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-slider-arrows {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
@@ -177,6 +184,7 @@
   gap: 10px;
 }
 
+/* Keep all other slider navigation styles the same */
 .hero-slider-number {
   background: transparent;
   border: none;
@@ -195,11 +203,6 @@
 
 .hero-slider-number:hover {
   opacity: 1;
-}
-
-.hero-slider-arrows {
-  display: flex;
-  gap: 15px;
 }
 
 .hero-slider-arrow {

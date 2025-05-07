@@ -6,6 +6,7 @@
   color: var(--dark-brown);
   font-family: var(--font-body);
   width: 100%;
+  padding: 8rem 0;
 }
 
 .contact-container {
@@ -13,6 +14,7 @@
   margin: 2rem auto;
   padding: 0;
   flex: 1;
+  padding: 0 2rem;
 }
 
 .contact-wrapper {

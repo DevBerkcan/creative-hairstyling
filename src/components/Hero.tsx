@@ -110,33 +110,34 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Slider navigation */}
-      <div className="hero-slider-nav">
-        <div className="hero-slider-numbers">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`hero-slider-number ${index === activeSlide ? 'active' : ''}`}
-              onClick={() => setActiveSlide(index)}
-            >
-              {String(index + 1).padStart(2, '0')}
-            </button>
-          ))}
-        </div>
-        
-        <div className="hero-slider-arrows">
-          <button className="hero-slider-arrow" onClick={prevSlide}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button className="hero-slider-arrow" onClick={nextSlide}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
-      </div>
+{/* Slider navigation - Modified to be centered */}
+<div className="hero-slider-nav">
+  <div className="hero-slider-arrows">
+    <button className="hero-slider-arrow" onClick={prevSlide}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/>
+      </svg>
+    </button>
+    
+    <div className="hero-slider-numbers">
+      {slides.map((_, index) => (
+        <button
+          key={index}
+          className={`hero-slider-number ${index === activeSlide ? 'active' : ''}`}
+          onClick={() => setActiveSlide(index)}
+        >
+          {String(index + 1).padStart(2, '0')}
+        </button>
+      ))}
+    </div>
+    
+    <button className="hero-slider-arrow" onClick={nextSlide}>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+      </svg>
+    </button>
+  </div>
+</div>
     </section>
   );
 };
