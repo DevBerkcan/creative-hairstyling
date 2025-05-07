@@ -166,6 +166,7 @@
   bottom: 20px;
   left: 20px;
   z-index: 20;
+
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -174,6 +175,7 @@
 .hero-slider-numbers {
   display: flex;
   gap: 8px;
+  font-weight: 1000;
 }
 
 /* Keep all other slider navigation styles the same */
@@ -242,8 +244,8 @@
 
 .hero-vertical-nav li {
   color: var(--dark-brown);
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 1000;
   letter-spacing: 1px;
   cursor: pointer;
   opacity: 0.6;

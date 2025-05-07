@@ -125,6 +125,7 @@ export const BeforeAfter = () => {
           </Link>
         </div>
       </div>
+
     </section>
   );
 };

@@ -9,6 +9,12 @@
     margin: 0 auto;
     padding: 0 2rem;
   }
+
+  .gallery-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
   
   .before-after-header {
     text-align: center;
