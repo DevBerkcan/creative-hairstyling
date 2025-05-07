@@ -51,6 +51,8 @@ export const Hero = () => {
 
   // Handle window resize
   useEffect(() => {
+    window.scrollTo(0, 0);
+    
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth > 768) {

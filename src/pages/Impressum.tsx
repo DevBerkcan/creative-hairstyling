@@ -2,8 +2,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/LegalPages.css';
 import { Footer } from '../components/Footer';
+import { useEffect } from 'react';
 
 export const Impressum = () => {
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div>
     <div className="legal-page">
