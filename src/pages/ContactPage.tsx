@@ -175,7 +175,7 @@ export const ContactPage = () => {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to="/pricing">PRICING</Link>
+              <Link to="/pricing">PREISLISTE</Link>
             </li>
             <li>
               <Link to="/gallery">GALLERY</Link>

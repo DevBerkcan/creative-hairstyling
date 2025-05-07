@@ -191,12 +191,12 @@ export const Gallery = () => {
             </li>
             <li>
               <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>
-                PRICING
+                PREISLISTE
               </Link>
             </li>
             <li>
               <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
-                CONTACT
+                KONTAKT
               </Link>
             </li>
             <li>
