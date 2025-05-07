@@ -58,7 +58,7 @@ export const Services = () => {
         >
           <h2 className="services-title">Unsere Leistungen</h2>
           <p className="services-subtitle">
-            Ein Lächeln bei jedem Besuch - Dein Creativ Hairstyling Team!
+            Dein Style, unsere Leidenschaft!
           </p>
         </motion.div>
         

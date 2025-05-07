@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/LegalPages.css';
+import { Footer } from '../components/Footer';
 
 export const AGB = () => {
   return (
+    <div>
     <div className="legal-page">
       <motion.div
         initial={{ opacity: 0 }}
@@ -64,6 +66,9 @@ export const AGB = () => {
           <p className="effective-date">Gültig ab: 01. Januar 2023</p>
         </div>
       </motion.div>
+
+    </div>
+    <Footer/>
     </div>
   );
 };

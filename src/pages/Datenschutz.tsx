@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import '../styles/LegalPages.css';
+import { Footer } from '../components/Footer';
 
 export const Datenschutz = () => {
   return (
+    <div>
     <div className="legal-page">
       <motion.div
         initial={{ opacity: 0 }}
@@ -69,6 +71,8 @@ export const Datenschutz = () => {
           </p>
         </div>
       </motion.div>
+    </div>
+    <Footer/>
     </div>
   );
 };
