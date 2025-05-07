@@ -1,21 +1,41 @@
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 800px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+/* Mobile menu button */
+.mobile-menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 100;
+  background: rgba(244, 240, 234, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-brown);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
 /* Top left icons */
 .hero-top-icons {
   position: absolute;
   top: 30px;
-  left: 40px;
+  left: 20px;
   z-index: 20;
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .hero-icon-link {
@@ -24,8 +44,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: rgba(244, 240, 234, 0.7);
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -38,7 +58,7 @@
 }
 
 .hero-icon {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 /* Full-screen background images */
@@ -69,7 +89,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   z-index: 10;
   text-align: center;
 }
@@ -79,7 +99,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
   height: 100%;
 }
 
@@ -88,11 +108,11 @@
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--dark-brown);
   font-family: var(--font-heading);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
   overflow: hidden;
@@ -103,33 +123,14 @@
   white-space: nowrap;
 }
 
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: 4.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero-title {
-    font-size: 5.5rem;
-    margin-bottom: 2rem;
-  }
-}
-
 .hero-description {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--dark-brown);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 1.5;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .hero-description {
-    font-size: 1.25rem;
-  }
 }
 
 .hero-buttons {
@@ -137,26 +138,24 @@
   justify-content: center;
 }
 
-.hero-button {
+.booking-button {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-weight: 500;
   text-align: center;
   transition: all 0.2s ease;
   cursor: pointer;
   text-decoration: none;
-  min-width: 200px;
-}
-
-.hero-button-primary {
+  min-width: 180px;
   background-color: var(--gold-ochre);
   color: var(--dark-brown);
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   border: none;
+  font-size: 0.9rem;
 }
 
-.hero-button-primary:hover {
+.booking-button:hover {
   background-color: var(--copper-rose);
   color: var(--white);
 }
@@ -164,24 +163,17 @@
 /* Updated CSS for centered slider navigation */
 .hero-slider-nav {
   position: absolute;
-  bottom: 40px;
-  left: 0;
-  right: 0;
+  bottom: 20px;
+  left: 20px;
   z-index: 20;
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.hero-slider-arrows {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hero-slider-numbers {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
 /* Keep all other slider navigation styles the same */
@@ -189,9 +181,9 @@
   background: transparent;
   border: none;
   color: var(--dark-brown);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
   opacity: 0.6;
   transition: opacity 0.3s ease;
 }
@@ -205,12 +197,17 @@
   opacity: 1;
 }
 
+.hero-slider-arrows {
+  display: flex;
+  gap: 10px;
+}
+
 .hero-slider-arrow {
   background: transparent;
   border: none;
   color: var(--dark-brown);
   cursor: pointer;
-  padding: 5px;
+  padding: 4px;
   transition: transform 0.3s ease;
 }
 
@@ -219,14 +216,14 @@
 }
 
 .hero-slider-arrow svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Vertical navigation */
 .hero-vertical-nav {
   position: fixed;
-  right: 40px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
@@ -238,13 +235,13 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
   align-items: flex-end;
 }
 
 .hero-vertical-nav li {
   color: var(--dark-brown);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
@@ -261,39 +258,126 @@
   font-weight: 600;
 }
 
-/* Bottom right text */
-.hero-bottom-text {
-  position: absolute;
-  right: 40px;
-  bottom: 40px;
-  color: var(--dark-brown);
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  z-index: 20;
-  transform: rotate(-90deg) translateX(100%);
-  transform-origin: right bottom;
-  opacity: 0.7;
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-top-icons {
+    top: 20px;
+    left: 15px;
+    gap: 10px;
+  }
+
+  .hero-icon-link {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .booking-button {
+    padding: 0.6rem 1.2rem;
+    min-width: 160px;
+    font-size: 0.8rem;
+  }
+
+  .hero-vertical-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: rgba(244, 240, 234, 0.95);
+    backdrop-filter: blur(5px);
+    transform: none;
+    transition: right 0.3s ease;
+    z-index: 90;
+    padding-top: 80px;
+  }
+
+  .hero-vertical-nav.mobile-open {
+    right: 0;
+  }
+
+  .hero-vertical-nav ul {
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .hero-vertical-nav li {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .hero-slider-nav {
+    bottom: 15px;
+    left: 15px;
+  }
 }
 
-/* Animation for slide transitions */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .hero-description {
+    font-size: 1.1rem;
+  }
+
+  .hero-vertical-nav li {
+    font-size: 0.9rem;
   }
 }
 
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
   }
-  to {
-    opacity: 0;
-    transform: translateY(-20px);
+
+  .hero-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-top-icons {
+    left: 40px;
+    gap: 20px;
+  }
+
+  .hero-icon-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-icon {
+    font-size: 1.1rem;
+  }
+
+  .hero-slider-nav {
+    bottom: 40px;
+    left: 40px;
+  }
+
+  .hero-vertical-nav {
+    right: 40px;
   }
 }

@@ -3,10 +3,14 @@ import { useRef, useState, useEffect } from "react";
 import "../styles/Hero.css";
 import backgroundImage1 from "../assets/frisur.jpg";
 import backgroundImage2 from "../assets/gettyimages-450245049_sf.webp";
+import { FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -36,6 +40,19 @@ export const Hero = () => {
     }
   ];
 
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Auto slide change every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,8 +69,42 @@ export const Hero = () => {
     setActiveSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
   };
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      setIsMobileMenuOpen(false);
+    }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <section id="home" className="hero" ref={ref}>
+      {/* Mobile menu button (only visible on small screens) */}
+      {windowWidth <= 768 && (
+        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      )}
+
+      {/* Top left icons */}
+      <div className="hero-top-icons">
+        <a href="tel:02148692859" className="hero-icon-link">
+          <FaPhone className="hero-icon" />
+        </a>
+        <a href="https://www.google.com/maps/place/Creativ+Hairstyling/@51.0313099,6.9793577,547m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47bf2eed754b316d:0x9712bb3a046bb38b!8m2!3d51.0313066!4d6.9819326!16s%2Fg%2F1tkks_jc?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+          <FaMapMarkerAlt className="hero-icon" />
+        </a>
+        <a href="https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962" target="_blank" rel="noopener noreferrer" className="hero-icon-link">
+          <FaCalendarAlt className="hero-icon" />
+        </a>
+      </div>
 
       {/* Full-screen background images */}
       {slides.map((slide, index) => (
@@ -110,34 +161,47 @@ export const Hero = () => {
         </div>
       </div>
 
-{/* Slider navigation - Modified to be centered */}
-<div className="hero-slider-nav">
-  <div className="hero-slider-arrows">
-    <button className="hero-slider-arrow" onClick={prevSlide}>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/>
-      </svg>
-    </button>
-    
-    <div className="hero-slider-numbers">
-      {slides.map((_, index) => (
-        <button
-          key={index}
-          className={`hero-slider-number ${index === activeSlide ? 'active' : ''}`}
-          onClick={() => setActiveSlide(index)}
-        >
-          {String(index + 1).padStart(2, '0')}
-        </button>
-      ))}
-    </div>
-    
-    <button className="hero-slider-arrow" onClick={nextSlide}>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
-      </svg>
-    </button>
-  </div>
-</div>
+      {/* Slider navigation */}
+      <div className="hero-slider-nav">
+        <div className="hero-slider-numbers">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`hero-slider-number ${index === activeSlide ? 'active' : ''}`}
+              onClick={() => setActiveSlide(index)}
+            >
+              {String(index + 1).padStart(2, '0')}
+            </button>
+          ))}
+        </div>
+        
+        <div className="hero-slider-arrows">
+          <button className="hero-slider-arrow" onClick={prevSlide}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button className="hero-slider-arrow" onClick={nextSlide}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Vertical navigation menu - connected to sections */}
+      <nav className={`hero-vertical-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+        <ul>
+          <li onClick={() => scrollToSection('home')}>HOME</li>
+          <li onClick={() => scrollToSection('services')}>LEISTUNGEN</li>
+          <li onClick={() => scrollToSection('uber-uns')}>ÜBER UNS</li>
+          <li onClick={() => scrollToSection('before-after')}>VORHER & NACHER</li>
+          <li onClick={() => scrollToSection('testimonials')}>TESTIMONIALS</li>
+          <li><Link to="/pricing">PRICING</Link></li>
+          <li><Link to="/contact">CONTACT</Link></li> 
+          <li><Link to="/gallery">GALLERY</Link></li> 
+        </ul>
+      </nav>
     </section>
   );
 };
