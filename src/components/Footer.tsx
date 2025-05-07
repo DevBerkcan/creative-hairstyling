@@ -22,10 +22,10 @@ export const Footer = () => {
               Haarpflege und modernes Styling.
             </p>
             <div className="footer-social">
-              <a href="#" aria-label="Instagram" className="social-icon">
+              <a href="https://www.instagram.com/creativ.hair.styling/" aria-label="Instagram" className="social-icon">
                 <FiInstagram />
               </a>
-              <a href="#" aria-label="Facebook" className="social-icon">
+              <a href="https://www.facebook.com/creativhairstyling/?locale=de_DE" aria-label="Facebook" className="social-icon">
                 <FiFacebook />
               </a>
             </div>

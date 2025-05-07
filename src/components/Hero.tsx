@@ -3,12 +3,14 @@ import { useRef, useState, useEffect } from "react";
 import "../styles/Hero.css";
 import backgroundImage1 from "../assets/frisur.jpg";
 import backgroundImage2 from "../assets/gettyimages-450245049_sf.webp";
-import { FaPhone, FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
+import { FaPhone, FaMapMarkerAlt, FaCalendarAlt, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export const Hero = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [activeSlide, setActiveSlide] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"]
@@ -38,6 +40,19 @@ export const Hero = () => {
     }
   ];
 
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   // Auto slide change every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
@@ -61,11 +76,23 @@ export const Hero = () => {
         behavior: 'smooth',
         block: 'start'
       });
+      setIsMobileMenuOpen(false);
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
     <section id="home" className="hero" ref={ref}>
+      {/* Mobile menu button (only visible on small screens) */}
+      {windowWidth <= 768 && (
+        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      )}
+
       {/* Top left icons */}
       <div className="hero-top-icons">
         <a href="tel:02148692859" className="hero-icon-link">
@@ -163,7 +190,7 @@ export const Hero = () => {
       </div>
 
       {/* Vertical navigation menu - connected to sections */}
-      <nav className="hero-vertical-nav">
+      <nav className={`hero-vertical-nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
         <ul>
           <li onClick={() => scrollToSection('home')}>HOME</li>
           <li onClick={() => scrollToSection('services')}>LEISTUNGEN</li>
