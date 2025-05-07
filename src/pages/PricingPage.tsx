@@ -363,13 +363,13 @@ export const PricingPage = () => {
 
         {/* Desktop Navigation Menu */}
         {windowWidth > 768 && (
-          <nav className="pricing-desktop-nav">
+          <nav className="hero-vertical-nav">
             <ul>
               <li>
                 <Link to="/">HOME</Link>
               </li>
               <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/contact">KONTAKT</Link>
               </li>
               <li>
                 <Link to="/gallery">GALLERY</Link>

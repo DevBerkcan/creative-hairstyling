@@ -130,7 +130,7 @@ export const Gallery = () => {
             transition={{ duration: 0.6 }}
             className="gallery-header"
           >
-            <h2 className="gallery-title">Unsere Arbeiten</h2>
+            <h2 className="gallery-title">Galerie</h2>
             <p className="gallery-subtitle">
               Entdecken Sie eine Auswahl unserer neuesten Arbeiten und lassen
               Sie sich inspirieren.
@@ -215,10 +215,10 @@ export const Gallery = () => {
                 <Link to="/">HOME</Link>
               </li>
               <li>
-                <Link to="/pricing">PRICING</Link>
+                <Link to="/pricing">PREISLISTE</Link>
               </li>
               <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/contact">KONTAKT</Link>
               </li>
             </ul>
           </nav>

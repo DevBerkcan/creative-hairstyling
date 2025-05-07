@@ -251,12 +251,12 @@ export const Hero = () => {
           <li onClick={() => scrollToSection("before-after")}>
             VORHER & NACHER
           </li>
-          <li onClick={() => scrollToSection("testimonials")}>TESTIMONIALS</li>
+          <li onClick={() => scrollToSection("testimonials")}>KUNDENSTIMMEN</li>
           <li>
-            <Link to="/pricing">PRICING</Link>
+            <Link to="/pricing">PREISLISTE</Link>
           </li>
           <li>
-            <Link to="/contact">CONTACT</Link>
+            <Link to="/contact">KONTAKT</Link>
           </li>
           <li>
             <Link to="/gallery">GALLERY</Link>
