@@ -130,7 +130,7 @@ export const Gallery = () => {
             transition={{ duration: 0.6 }}
             className="gallery-header"
           >
-            <h2 className="gallery-title">Galerie</h2>
+            <h2 className="gallery-title">Gallery</h2>
             <p className="gallery-subtitle">
               Entdecken Sie eine Auswahl unserer neuesten Arbeiten und lassen
               Sie sich inspirieren.
