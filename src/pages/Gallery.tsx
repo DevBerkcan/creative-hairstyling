@@ -209,7 +209,7 @@ export const Gallery = () => {
 
         {/* Desktop Navigation Menu */}
         {windowWidth > 768 && (
-          <nav className="gallery-desktop-nav">
+          <nav className="hero-vertical-nav">
             <ul>
               <li>
                 <Link to="/">HOME</Link>

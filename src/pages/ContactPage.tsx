@@ -169,7 +169,7 @@ export const ContactPage = () => {
 
       {/* Desktop Navigation Menu */}
       {windowWidth > 768 && (
-        <nav className="contact-desktop-nav">
+        <nav className="hero-vertical-nav">
           <ul>
             <li>
               <Link to="/">HOME</Link>
