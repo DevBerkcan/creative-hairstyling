@@ -6,18 +6,16 @@ import { useEffect } from "react";
 import { Footer } from "../components/Footer";
 
 export const PricingPage = () => {
-
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <section id="pricing" className="pricing-section">
         <div className="pricing-container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="pricing-header"
           >
@@ -31,9 +29,8 @@ export const PricingPage = () => {
             {/* Damen */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -91,9 +88,8 @@ export const PricingPage = () => {
             {/* Herren */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -131,9 +127,8 @@ export const PricingPage = () => {
             {/* Kinder */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -158,9 +153,8 @@ export const PricingPage = () => {
             {/* Farbe */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card highlight"
             >
               <div className="pricing-card-header">
@@ -177,7 +171,7 @@ export const PricingPage = () => {
                   <div className="price-tiers">
                     <span>39 €</span>
                     <span>45 €</span>
-                    <span>    </span>
+                    <span> </span>
                   </div>
                 </div>
                 <div className="pricing-item">
@@ -191,7 +185,7 @@ export const PricingPage = () => {
                 <div className="pricing-item">
                   <span>Balayage</span>
                   <div className="price-tiers">
-                    <span>    </span>
+                    <span> </span>
                     <span>85 €</span>
                     <span>95 €</span>
                   </div>
@@ -218,9 +212,8 @@ export const PricingPage = () => {
             {/* Kosmetik */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -245,9 +238,8 @@ export const PricingPage = () => {
             {/* Pflege */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -276,9 +268,8 @@ export const PricingPage = () => {
             {/* Extensions */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
               className="pricing-card"
             >
               <div className="pricing-card-header">
@@ -302,10 +293,9 @@ export const PricingPage = () => {
           </div>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
             className="pricing-disclaimer"
           >
             <p>

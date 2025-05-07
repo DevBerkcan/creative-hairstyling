@@ -1,6 +1,12 @@
 .gallery {
-  padding: 5rem 0;
   background-color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-brown);
+  font-family: var(--font-body);
+  width: 100%;
+  padding-top: 8rem;
   position: relative;
 }
 
@@ -255,7 +261,7 @@
 /* Responsive styles */
 @media (max-width: 768px) {
   .gallery {
-    padding: 3rem 0;
+    padding: 0 1rem;
   }
   
   .gallery-title {
@@ -288,7 +294,7 @@
 
 @media (max-width: 480px) {
   .gallery {
-    padding: 2rem 0;
+    padding: 6rem 0;
   }
 
   .gallery-title {
