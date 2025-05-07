@@ -6,7 +6,7 @@
   color: var(--dark-brown);
   font-family: var(--font-body);
   width: 100%;
-  padding-top: 2rem;
+  padding: 5rem 0;
   position: relative;
 }
 
@@ -294,7 +294,7 @@
 
 @media (max-width: 480px) {
   .gallery {
-    padding: 6rem 0;
+    padding: 5rem 0;
   }
 
   .gallery-title {

@@ -1,16 +1,41 @@
-// components/PricingSection.tsx
 import { motion } from "framer-motion";
 import "../styles/PricingSection.css";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Footer } from "../components/Footer";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export const PricingPage = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+      if (window.innerWidth > 768) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <div>
+      {/* Mobile menu button (only visible on small screens) */}
+      {windowWidth <= 768 && (
+        <button className="mobile-menu-button" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      )}
+
       <section id="pricing" className="pricing-section">
         <div className="pricing-container">
           <motion.div
@@ -153,7 +178,7 @@ export const PricingPage = () => {
             {/* Farbe */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="pricing-card highlight"
             >
@@ -305,20 +330,53 @@ export const PricingPage = () => {
             <p>** Kostenlose Beratungstermine verfügbar.</p>
           </motion.div>
         </div>
-        {/* Vertical navigation menu - connected to sections */}
-        <nav className="hero-vertical-nav">
+
+        {/* Mobile Navigation Menu */}
+        <nav
+          className={`pricing-mobile-nav ${
+            isMobileMenuOpen ? "mobile-open" : ""
+          }`}
+        >
           <ul>
             <li>
-              <Link to="/">HOME</Link>
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
+                HOME
+              </Link>
             </li>
             <li>
-              <Link to="/contact">CONTACT</Link>
+              <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
+                CONTACT
+              </Link>
             </li>
             <li>
-              <Link to="/gallery">GALLERY</Link>
+              <Link to="/gallery" onClick={() => setIsMobileMenuOpen(false)}>
+                GALLERY
+              </Link>
+            </li>
+            <li>
+              <Link to="/pricing" onClick={() => setIsMobileMenuOpen(false)}>
+                PRICING
+              </Link>
             </li>
           </ul>
         </nav>
+
+        {/* Desktop Navigation Menu */}
+        {windowWidth > 768 && (
+          <nav className="pricing-desktop-nav">
+            <ul>
+              <li>
+                <Link to="/">HOME</Link>
+              </li>
+              <li>
+                <Link to="/contact">CONTACT</Link>
+              </li>
+              <li>
+                <Link to="/gallery">GALLERY</Link>
+              </li>
+            </ul>
+          </nav>
+        )}
       </section>
       <Footer />
     </div>
