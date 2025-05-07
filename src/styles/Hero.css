@@ -245,7 +245,7 @@
 .hero-vertical-nav li {
   color: var(--dark-brown);
   font-size: 1rem;
-  font-weight: 1000;
+  font-weight: 800;
   letter-spacing: 1px;
   cursor: pointer;
   opacity: 0.6;
