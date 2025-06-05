@@ -18,8 +18,8 @@ export const UberUns = () => {
           
           <div className="uber-uns-text">
             <p>
-              Seit 2010 verwandeln wir Haare in Kunstwerke und Frisuren in Statements. 
-              Unser Salon in Berlin-Mitte ist mehr als nur ein Hairstudio - 
+              Seit 2023 verwandeln wir Haare in Kunstwerke und Frisuren in Statements. 
+              Unser Salon in Leverkusen ist mehr als nur ein Hairstudio - 
               es ist ein Ort der Kreativität und Entspannung.
             </p>
             
