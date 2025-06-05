@@ -1,8 +1,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import "../styles/Hero.css";
-import backgroundImage1 from "../assets/frisur.jpg";
-import backgroundImage2 from "../assets/gettyimages-450245049_sf.webp";
+import backgroundImage1 from "../assets/call.jpg";
+import backgroundImage2 from "../assets/salon-image.jpg";
+import backgroundImage3 from "../assets/salon1.jpg";
 import {
   FaPhone,
   FaMapMarkerAlt,
@@ -45,7 +46,7 @@ export const Hero = () => {
       description:
         "Tradition meets modern hairstyling. Unser erfahrenes Team steht Ihnen mit jahrelanger Expertise zur Verfügung.",
       buttonText: "Über uns",
-      background: backgroundImage1,
+      background: backgroundImage3,
     },
   ];
 

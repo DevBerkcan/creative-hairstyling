@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import '../styles/Team.css';
+import team from "../assets/team.jpg";
 
 export const UberUns = () => {
   return (
@@ -45,7 +46,7 @@ export const UberUns = () => {
           className="team-photo-container"
         >
           <img 
-            src="https://images.unsplash.com/photo-1588514899099-e2df6951dde6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80" 
+            src={team} 
             alt="Unser Team" 
             className="team-photo"
           />

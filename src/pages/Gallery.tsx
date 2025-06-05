@@ -9,6 +9,15 @@ import vorher2 from "../assets/vorher2.jpg";
 import nachher2 from "../assets/nacher2.jpg";
 import vorher3 from "../assets/vorher3.jpg";
 import nachher3 from "../assets/nacher3.jpg";
+import image2 from "../assets/2.jpg";
+import image3 from "../assets/3.jpg";
+import image4 from "../assets/4.jpg";
+import image5 from "../assets/5.jpg";
+import image6 from "../assets/6.jpg";
+import image7 from "../assets/7.jpg";
+import image8 from "../assets/8.jpg";
+import image9 from "../assets/9.jpg";
+import image10 from "../assets/10.jpg";
 import "../styles/Gallery.css";
 import { Footer } from "../components/Footer";
 
@@ -50,42 +59,47 @@ const galleryImages = [
     type: "after",
   },
   {
-    src: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image2,
     alt: "Damenhaarschnitt",
     category: "Schnitte",
   },
   {
-    src: "https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image3,
     alt: "Coloration",
     category: "Farbe",
   },
   {
-    src: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image4,
     alt: "Herrenschnitt",
     category: "Schnitte",
   },
   {
-    src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image5,
     alt: "Hochsteckfrisur",
     category: "Styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image6,
     alt: "Haarbehandlung",
     category: "Pflege",
   },
   {
-    src: "https://images.unsplash.com/photo-1605497788044-5a32c7078486?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image7,
     alt: "Strähnen",
     category: "Farbe",
   },
   {
-    src: "https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image8,
     alt: "Brautfrisur",
     category: "Styling",
   },
   {
-    src: "https://images.unsplash.com/photo-1581403341630-a6e0b9d2d257?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    src: image9,
+    alt: "Kinderhaarschnitt",
+    category: "Schnitte",
+  },
+    {
+    src: image10,
     alt: "Kinderhaarschnitt",
     category: "Schnitte",
   },
