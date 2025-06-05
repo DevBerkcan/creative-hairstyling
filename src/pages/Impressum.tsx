@@ -26,40 +26,34 @@ export const Impressum = () => {
         <h1 className="legal-title">Impressum</h1>
         
         <div className="legal-content">
-          <h2>Angaben gemäß § 5 TMG</h2>
+          <h2>Anbieter:</h2>
           <p>
-            Haarstudio Schönheit<br />
-            Inhaber: Max Mustermann<br />
-            Musterstraße 123<br />
-            10115 Berlin
+            Creativ Hair Styling<br />
+            Hauptstraße 71<br />
+            51373 Leverkusen<br />
+            Deutschland
           </p>
 
           <h2>Kontakt</h2>
           <p>
-            Telefon: +49 30 12345678<br />
-            E-Mail: info@haarstudio-schoenheit.de<br />
-            Termine nur nach Vereinbarung
+            Telefon: +49 177 3525548<br />
+            E-Mail: duman38fatos@hotmail.de
           </p>
 
           <h2>Umsatzsteuer-ID</h2>
           <p>
-            Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz:<br />
-            DE123456789
+            Umsatzsteuer-Identifikationsnummer: DE359715717
           </p>
 
-          <h2>Berufsbezeichnung und berufsrechtliche Regelungen</h2>
+          <h2>Kammer:</h2>
           <p>
-            Berufsbezeichnung: Friseurmeister<br />
-            Zuständige Kammer: Handwerkskammer Berlin<br />
-            Verliehen in: Deutschland<br />
-            Es gelten die Berufsordnung der Friseurinnung Berlin.
-          </p>
-
-          <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-          <p>
-            Max Mustermann<br />
-            Musterstraße 123<br />
-            10115 Berlin
+            Handwerkskammer zu Köln<br />
+            Heumarkt 12<br />
+            50667 Köln<br />
+            Deutschland<br />
+            E-Mail: info@hwk-koeln.de<br />
+            Webseite: <a href="https://www.hwk-koeln.de" target="_blank" rel="noopener noreferrer">https://www.hwk-koeln.de</a><br />
+            Telefon: 0221 2022-0
           </p>
 
           <h2>EU-Streitschlichtung</h2>
@@ -74,6 +68,10 @@ export const Impressum = () => {
           <h2>Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
           <p>
             Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+          </p>
+
+          <p>
+            Im Falle von Abweichungen zwischen der deutschen und der englischen Fassung hat die deutsche Fassung Vorrang.
           </p>
         </div>
       </motion.div>

@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import "../styles/LegalPages.css";
-import { Footer } from "../components/Footer";
-import { useEffect } from "react";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import '../styles/LegalPages.css';
+import { Footer } from '../components/Footer';
+import { useEffect } from 'react';
 
 export const Datenschutz = () => {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -25,67 +26,60 @@ export const Datenschutz = () => {
           <h1 className="legal-title">Datenschutzerklärung</h1>
 
           <div className="legal-content">
-            <h2>1. Datenschutz auf einen Blick</h2>
-            <h3>Allgemeine Informationen</h3>
+            <h2>Allgemein</h2>
             <p>
-              Die folgenden Hinweise geben einen einfachen Überblick darüber,
-              was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere
-              Website besuchen oder unsere Dienstleistungen in Anspruch nehmen.
+              Als Betreiber dieser Webseite und als Unternehmen kommen wir mit Ihren personenbezogenen Daten in Kontakt.
+              Gemeint sind alle Daten, die etwas über Sie aussagen und mit denen Sie identifiziert werden können.
+              In dieser Datenschutzerklärung möchten wir Ihnen erläutern, in welcher Weise, zu welchem Zweck und auf welcher
+              rechtlichen Grundlage wir Ihre Daten verarbeiten.
             </p>
 
-            <h3>Datenerfassung auf unserer Website</h3>
+            <h2>Verantwortliche Stelle</h2>
             <p>
-              <strong>Wer ist verantwortlich für die Datenerfassung?</strong>
-              <br />
-              Die Datenverarbeitung auf dieser Website erfolgt durch den
-              Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum
-              entnehmen.
+              Creativ Hair Styling<br />
+              Hauptstraße 71<br />
+              51373 Leverkusen<br />
+              Deutschland<br />
+              Telefon: +49 177 3525548<br />
+              E-Mail: duman38fatos@hotmail.de
             </p>
 
-            <h2>2. Allgemeine Informationen und Pflichtangaben</h2>
-            <h3>Datenschutz</h3>
+            <h2>Erhebung und Speicherung personenbezogener Daten</h2>
             <p>
-              Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen
-              Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
-              vertraulich und entsprechend der gesetzlichen
-              Datenschutzvorschriften.
+              Beim Besuch dieser Website werden automatisch Informationen allgemeiner Natur erfasst.
+              Diese Informationen (Server-Logfiles) beinhalten z. B. die Art des Webbrowsers, das verwendete Betriebssystem,
+              den Domainnamen Ihres Internet Service Providers und Ähnliches. Hierbei handelt es sich ausschließlich um Informationen,
+              welche keine Rückschlüsse auf Ihre Person zulassen.
             </p>
 
-            <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+            <h2>Kontaktformular</h2>
             <p>
-              Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
-              Einwilligung möglich. Sie können eine bereits erteilte
-              Einwilligung jederzeit widerrufen.
+              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen
+              dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.
+              Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.
             </p>
 
-            <h2>3. Datenerfassung auf unserer Website</h2>
-            <h3>Kontaktformular</h3>
+            <h2>Ihre Rechte</h2>
+            <p>Sie haben das Recht:</p>
+            <ul>
+              <li>Auskunft über Ihre bei uns gespeicherten Daten und deren Verarbeitung zu erhalten,</li>
+              <li>Berichtigung unrichtiger personenbezogener Daten zu verlangen,</li>
+              <li>Löschung Ihrer bei uns gespeicherten Daten zu verlangen („Recht auf Vergessenwerden“),</li>
+              <li>die Einschränkung der Datenverarbeitung zu verlangen, sofern wir Ihre Daten aufgrund gesetzlicher Pflichten noch nicht löschen dürfen,</li>
+              <li>Widerspruch gegen die Verarbeitung Ihrer Daten einzulegen,</li>
+              <li>und Datenübertragbarkeit zu verlangen, sofern Sie in die Datenverarbeitung eingewilligt haben oder einen Vertrag mit uns abgeschlossen haben.</li>
+            </ul>
+
+            <h2>Beschwerderecht bei der Aufsichtsbehörde</h2>
             <p>
-              Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden
-              Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten
-              zwecks Bearbeitung der Anfrage und für den Fall von
-              Anschlussfragen bei uns gespeichert.
+              Sie können sich jederzeit mit einer Beschwerde an die für Sie zuständige Aufsichtsbehörde wenden.
+              Ihre zuständige Aufsichtsbehörde richtet sich nach dem Bundesland Ihres Wohnsitzes, Ihrer Arbeit oder der mutmaßlichen Verletzung.
             </p>
 
-            <h3>Terminbuchung</h3>
+            <h2>Änderung unserer Datenschutzbestimmungen</h2>
             <p>
-              Für die Buchung von Terminen erfassen wir folgende Daten: Name,
-              Telefonnummer, E-Mail-Adresse und gewünschte Dienstleistung. Diese
-              Daten werden ausschließlich zur Terminvereinbarung und -erinnerung
-              verwendet.
-            </p>
-
-            <h2>4. Analyse-Tools und Tools von Drittanbietern</h2>
-            <p>
-              Beim Besuch unserer Website kann Ihr Surf-Verhalten statistisch
-              ausgewertet werden. Das geschieht vor allem mit Cookies.
-            </p>
-
-            <h2>5. Plugins und Tools</h2>
-            <h3>Google Web Fonts</h3>
-            <p>
-              Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten
-              so genannte Web Fonts, die von Google bereitgestellt werden.
+              Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht
+              oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen, z. B. bei der Einführung neuer Services.
             </p>
           </div>
         </motion.div>
