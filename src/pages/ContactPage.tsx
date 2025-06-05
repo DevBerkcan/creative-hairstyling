@@ -1,7 +1,7 @@
 import { Footer } from "../components/Footer";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import salonImage from "../assets/salon.jpeg";
+import salonImage from "../assets/salon-image.jpg";
 import "../styles/ContactPage.css";
 import { FiMapPin, FiPhone, FiMail, FiClock } from "react-icons/fi";
 import { useEffect, useState } from "react";

@@ -42,9 +42,9 @@ export const Hero = () => {
       background: backgroundImage2,
     },
     {
-      title: "New York's Since 2004",
+      title: "Pflege mit Stil",
       description:
-        "Tradition meets modern hairstyling. Unser erfahrenes Team steht Ihnen mit jahrelanger Expertise zur Verfügung.",
+        "Unsere Produkte und Techniken sorgen nicht nur für schönes Haar, sondern auch für gesunde Kopfhaut und nachhaltige Ergebnisse.",
       buttonText: "Über uns",
       background: backgroundImage3,
     },
