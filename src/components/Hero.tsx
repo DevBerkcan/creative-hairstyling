@@ -4,6 +4,8 @@ import "../styles/Hero.css";
 import backgroundImage1 from "../assets/call.jpg";
 import backgroundImage2 from "../assets/salon-image.jpg";
 import backgroundImage3 from "../assets/salon1.jpg";
+import logo from "../assets/logo.png";
+
 import {
   FaPhone,
   FaMapMarkerAlt,
@@ -53,7 +55,7 @@ export const Hero = () => {
   // Handle window resize
   useEffect(() => {
     window.scrollTo(0, 0);
-    
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
       if (window.innerWidth > 768) {
@@ -173,7 +175,7 @@ export const Hero = () => {
                     ? "https://www.fresha.com/de/a/creative-hair-styling-leverkusen-hauptstrasse-71-ix388dnm/booking?menu=true&pId=2539116&dppub=true&employeeId=4620962"
                     : activeSlide === 1
                     ? "#services"
-                    : "#uber-uns" 
+                    : "#uber-uns"
                 }
                 target={activeSlide === 0 ? "_blank" : "_self"}
                 rel="noopener noreferrer"
@@ -247,6 +249,9 @@ export const Hero = () => {
       <nav
         className={`hero-vertical-nav ${isMobileMenuOpen ? "mobile-open" : ""}`}
       >
+        <div className="hero-logo-wrapper">
+          <img src={logo} alt="Salon Logo" className="hero-logo" />
+        </div>
         <ul>
           <li onClick={() => scrollToSection("home")}>HOME</li>
           <li onClick={() => scrollToSection("services")}>LEISTUNGEN</li>
