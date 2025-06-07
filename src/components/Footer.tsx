@@ -16,7 +16,7 @@ export const Footer = () => {
       <div className="footer-container">
         <div className="footer-grid">
           <div className="footer-about">
-            <h3 className="footer-logo">Creativ Hair styling</h3>
+            <h3 className="footer-logo">Creativ Hair Styling</h3>
             <p className="footer-description">
               Ihr professioneller Haarsalon in Leverkusen für erstklassige
               Haarpflege und modernes Styling.
@@ -110,7 +110,7 @@ export const Footer = () => {
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            &copy; {new Date().getFullYear()} Creativ Hairstyling. Alle Rechte
+            &copy; {new Date().getFullYear()} Creativ Hair Styling. Alle Rechte
             vorbehalten.
           </p>
           <div className="footer-legal">

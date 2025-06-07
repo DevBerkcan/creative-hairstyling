@@ -64,7 +64,7 @@ export const ContactPage = () => {
                 <div className="contact-item">
                   <FiMapPin className="contact-icon" />
                   <div>
-                    <strong>Creativ Hairstyling</strong>
+                    <strong>Creativ Hair Styling</strong>
                     <br />
                     Hauptstraße 71
                     <br />

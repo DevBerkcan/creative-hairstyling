@@ -28,7 +28,7 @@ export const Hero = () => {
 
   const slides = [
     {
-      title: "Ihr perfekter Haarschnitt",
+      title: "Creativ Hair Styling",
       description:
         "Professionelle Haarpflege und Styling in entspannter Atmosphäre. Entdecken Sie unsere Premium-Dienstleistungen für Ihren perfekten Look.",
       buttonText: "Jetzt Termin buchen",
