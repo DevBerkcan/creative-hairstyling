@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import vorher1 from "../assets/vorher1.jpg";
-import nacher1 from "../assets/nacher1.jpg";
-import vorher2 from "../assets/vorher2.jpg";
-import nacher2 from "../assets/nacher2.jpg";
+import vorher1 from "../assets/vorher4.jpg";
+import nacher1 from "../assets/nacher4.jpg";
+import vorher2 from "../assets/vorher5.jpg";
+import nacher2 from "../assets/nacher5.jpg";
 import vorher3 from "../assets/vorher3.jpg";
 import nacher3 from "../assets/nacher3.jpg";
 import "../styles/BeforeAfter.css";

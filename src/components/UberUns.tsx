@@ -52,7 +52,7 @@ export const UberUns = () => {
           />
           <div className="team-photo-overlay">
             <h3 className="team-photo-title">Unser Team</h3>
-            <p className="team-photo-subtitle">Leidenschaft für Haare seit über einem Jahrzehnt</p>
+            <p className="team-photo-subtitle">Leidenschaft für Haare seit 2023</p>
           </div>
         </motion.div>
       </div>

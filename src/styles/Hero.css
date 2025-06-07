@@ -121,6 +121,7 @@
 .hero-title-word {
   display: inline-block;
   white-space: nowrap;
+  margin-right: 1rem;
 }
 
 .hero-description {
