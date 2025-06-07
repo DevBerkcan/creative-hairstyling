@@ -23,6 +23,12 @@ import vorher5 from "../assets/vorher5.jpg";
 import nachher5 from "../assets/nacher5.jpg";
 import vorher6 from "../assets/vorher6.jpg";
 import nachher6 from "../assets/nacher6.jpg";
+import vorher7 from "../assets/vorher7.jpg";
+import nachher7 from "../assets/nacher7.jpg";
+import vorher8 from "../assets/vorher8.jpg";
+import nachher8 from "../assets/nacher8.jpg";
+import vorher9 from "../assets/vorher9.jpg";
+import nachher9 from "../assets/nacher9.jpg";
 import "../styles/Gallery.css";
 import { Footer } from "../components/Footer";
 
@@ -48,6 +54,12 @@ const galleryImages = [
   { src: nachher5, alt: "Haarschnitt", category: "Nachher", type: "after" },
   { src: vorher6, alt: "Haarschnitt", category: "Vorher", type: "before" },
   { src: nachher6, alt: "Haarschnitt", category: "Nachher", type: "after" },
+  { src: vorher7, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher7, alt: "Haarschnitt", category: "Nachher", type: "after" },
+  { src: vorher8, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher8, alt: "Haarschnitt", category: "Nachher", type: "after" },
+  { src: vorher9, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher9, alt: "Haarschnitt", category: "Nachher", type: "after" },
 ];
 
 export const Gallery = () => {
