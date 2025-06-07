@@ -1,4 +1,3 @@
-// components/Gallery.tsx
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -18,96 +17,43 @@ import image7 from "../assets/7.jpg";
 import image8 from "../assets/8.jpg";
 import image9 from "../assets/9.jpg";
 import image10 from "../assets/10.jpg";
+import vorher4 from "../assets/vorher4.jpg";
+import nachher4 from "../assets/nacher4.jpg";
+import vorher5 from "../assets/vorher5.jpg";
+import nachher5 from "../assets/nacher5.jpg";
+import vorher6 from "../assets/vorher6.jpg";
+import nachher6 from "../assets/nacher6.jpg";
 import "../styles/Gallery.css";
 import { Footer } from "../components/Footer";
 
 const galleryImages = [
-  {
-    src: vorher1,
-    alt: "Vorher: Natürliches Braun",
-    category: "Coloration",
-    type: "before",
-  },
-  {
-    src: nachher1,
-    alt: "Nachher: Helles Balayage",
-    category: "Coloration",
-    type: "after",
-  },
-  {
-    src: vorher2,
-    alt: "Vorher: Lockiges Haar",
-    category: "Glättung",
-    type: "before",
-  },
-  {
-    src: nachher2,
-    alt: "Nachher: Glattes Haar",
-    category: "Glättung",
-    type: "after",
-  },
-  {
-    src: vorher3,
-    alt: "Vorher: Kurzer Schnitt",
-    category: "Haarschnitt",
-    type: "before",
-  },
-  {
-    src: nachher3,
-    alt: "Nachher: Moderner Styling",
-    category: "Haarschnitt",
-    type: "after",
-  },
-  {
-    src: image2,
-    alt: "Damenhaarschnitt",
-    category: "Schnitte",
-  },
-  {
-    src: image3,
-    alt: "Coloration",
-    category: "Farbe",
-  },
-  {
-    src: image4,
-    alt: "Herrenschnitt",
-    category: "Schnitte",
-  },
-  {
-    src: image5,
-    alt: "Hochsteckfrisur",
-    category: "Styling",
-  },
-  {
-    src: image6,
-    alt: "Haarbehandlung",
-    category: "Pflege",
-  },
-  {
-    src: image7,
-    alt: "Strähnen",
-    category: "Farbe",
-  },
-  {
-    src: image8,
-    alt: "Brautfrisur",
-    category: "Styling",
-  },
-  {
-    src: image9,
-    alt: "Kinderhaarschnitt",
-    category: "Schnitte",
-  },
-    {
-    src: image10,
-    alt: "Kinderhaarschnitt",
-    category: "Schnitte",
-  },
+  { src: vorher1, alt: "Vorher: Natürliches Braun", category: "Coloration", type: "before" },
+  { src: nachher1, alt: "Nachher: Helles Balayage", category: "Coloration", type: "after" },
+  { src: vorher2, alt: "Vorher: Lockiges Haar", category: "Glättung", type: "before" },
+  { src: nachher2, alt: "Nachher: Glattes Haar", category: "Glättung", type: "after" },
+  { src: vorher3, alt: "Vorher: Kurzer Schnitt", category: "Haarschnitt", type: "before" },
+  { src: nachher3, alt: "Nachher: Moderner Styling", category: "Haarschnitt", type: "after" },
+  { src: image2, alt: "Damenhaarschnitt", category: "Schnitte" },
+  { src: image3, alt: "Coloration", category: "Farbe" },
+  { src: image4, alt: "Haarschnitt", category: "Schnitte" },
+  { src: image5, alt: "Hochsteckfrisur", category: "Styling" },
+  { src: image6, alt: "Haarbehandlung", category: "Pflege" },
+  { src: image7, alt: "Strähnen", category: "Farbe" },
+  { src: image8, alt: "Brautfrisur", category: "Styling" },
+  { src: image9, alt: "Haarschnitt", category: "Schnitte" },
+  { src: image10, alt: "Haarschnitt", category: "Schnitte" },
+  { src: vorher4, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher4, alt: "Haarschnitt", category: "Nachher", type: "after" },
+  { src: vorher5, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher5, alt: "Haarschnitt", category: "Nachher", type: "after" },
+  { src: vorher6, alt: "Haarschnitt", category: "Vorher", type: "before" },
+  { src: nachher6, alt: "Haarschnitt", category: "Nachher", type: "after" },
 ];
 
 export const Gallery = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [activeFilter, setActiveFilter] = useState("Alle");
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -127,9 +73,18 @@ export const Gallery = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const filters = ["Alle", "Schnitte", "Farbe", "Styling", "Pflege", "Vorher/Nachher"];
+
+  const filteredImages = galleryImages.filter((image) => {
+    if (activeFilter === "Alle") return true;
+    if (activeFilter === "Vorher/Nachher") {
+      return image.type === "before" || image.type === "after";
+    }
+    return image.category === activeFilter;
+  });
+
   return (
     <div>
-      {/* Mobile menu button (only visible on small screens) */}
       {windowWidth <= 768 && (
         <button className="mobile-menu-button" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
@@ -146,22 +101,27 @@ export const Gallery = () => {
           >
             <h2 className="gallery-title">Gallery</h2>
             <p className="gallery-subtitle">
-              Entdecken Sie eine Auswahl unserer neuesten Arbeiten und lassen
-              Sie sich inspirieren.
+              Entdecken Sie eine Auswahl unserer neuesten Arbeiten und lassen Sie sich inspirieren.
             </p>
           </motion.div>
 
           <div className="gallery-filters">
-            <button className="filter-button active">Alle</button>
-            <button className="filter-button">Schnitte</button>
-            <button className="filter-button">Farbe</button>
-            <button className="filter-button">Styling</button>
-            <button className="filter-button">Pflege</button>
-            <button className="filter-button">Vorher/Nachher</button>
+            {filters.map((filter) => (
+              <button
+                key={filter}
+                className={`filter-button ${activeFilter === filter ? "active" : ""}`}
+                onClick={() => {
+                  setActiveFilter(filter);
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                {filter}
+              </button>
+            ))}
           </div>
 
           <div className="gallery-grid">
-            {galleryImages.map((image, index) => (
+            {filteredImages.map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0 }}
@@ -191,11 +151,8 @@ export const Gallery = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation Menu */}
         <nav
-          className={`gallery-mobile-nav ${
-            isMobileMenuOpen ? "mobile-open" : ""
-          }`}
+          className={`gallery-mobile-nav ${isMobileMenuOpen ? "mobile-open" : ""}`}
         >
           <ul>
             <li>
@@ -221,23 +178,17 @@ export const Gallery = () => {
           </ul>
         </nav>
 
-        {/* Desktop Navigation Menu */}
         {windowWidth > 768 && (
           <nav className="hero-vertical-nav">
             <ul>
-              <li>
-                <Link to="/">HOME</Link>
-              </li>
-              <li>
-                <Link to="/pricing">PREISLISTE</Link>
-              </li>
-              <li>
-                <Link to="/contact">KONTAKT</Link>
-              </li>
+              <li><Link to="/">HOME</Link></li>
+              <li><Link to="/pricing">PREISLISTE</Link></li>
+              <li><Link to="/contact">KONTAKT</Link></li>
             </ul>
           </nav>
         )}
       </section>
+
       <Footer />
     </div>
   );
