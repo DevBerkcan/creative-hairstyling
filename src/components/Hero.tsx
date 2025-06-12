@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import "../styles/Hero.css";
 import backgroundImage1 from "../assets/call.jpg";
 import backgroundImage2 from "../assets/salon-image.jpg";
-import backgroundImage3 from "../assets/salon1.jpg";
+import backgroundImage3 from "../assets/Pflege.webp";
 import logo from "../assets/logo.png";
 
 import {

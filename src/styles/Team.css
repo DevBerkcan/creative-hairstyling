@@ -89,12 +89,14 @@
   font-family: var(--font-heading);
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
+  color: white;
 }
 
 .team-photo-subtitle {
   font-size: 1rem;
   opacity: 0.9;
   letter-spacing: 1px;
+  color: #D9CFC7;
 }
 
 @media (max-width: 768px) {
